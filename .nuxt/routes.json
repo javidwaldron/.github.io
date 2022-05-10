@@ -1,0 +1,9 @@
+[
+  {
+    "name": "app",
+    "path": "/app",
+    "component": "/app/pages/app.vue",
+    "chunkName": "pages/app",
+    "_name": "_a81b68b2"
+  }
+]
