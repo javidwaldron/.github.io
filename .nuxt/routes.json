@@ -1,9 +1,9 @@
 [
   {
-    "name": "app",
-    "path": "/app",
-    "component": "/app/pages/app.vue",
-    "chunkName": "pages/app",
-    "_name": "_a81b68b2"
+    "name": "index",
+    "path": "/",
+    "component": "/app/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2dfb1658"
   }
 ]
