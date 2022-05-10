@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  import MyFooter from '~components/footer.vue';
+  import MyFooter from '../components/footer.vue';
   
 export default {
   head: {

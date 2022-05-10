@@ -10,17 +10,13 @@ export default {
     return {
       posts : null
     }
-  },
-  methods:{},
-  created(){},
-  head () {
   }
 }
 </script>
 
-<style scoped lang=s>
-.title
-{
-  margin: 50px 0;
+<style lang="scss">
+.title {
+  font-size: 10vw;
+  font-weight: bold;
 }
 </style>
