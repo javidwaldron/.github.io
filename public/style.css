@@ -1,10 +1,54 @@
 :root {
-  --color-bg: #BDC9FF;
-  --color-text-main: #000000;
-  --color-primary: #AFECE0;
+  --accent: #27C9ED;
+  --dark-label: #ffffff;
+  --dark-background: #040D1D;
+  --dark-background-elavated: #213558;
+  --light-label: #010101;
+  --light-background: #F3F6FA;
+  --light-background-elavated: #D9E2F3;
+  
+  --foreground: var(--light-label);
+  --background: var(--light-background);
+  --background-offset: var(--light-background-elavated);
   
   --font-family: monospace;
-  --font-family-header: "HK Grotesk";
-  
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: var(--dark-label);
+    --background: var(--dark-background);
+    --background-offset: var(--dark-background-elavated);
+  }
+}
+
+html, body {
+  width: 100%;
+}
+body {
   font-family: var(--font-family);
+  color: var(--foreground);
+  background: var(--background);
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 67.3;
+}
+h2 {
+  font-size:;
+}
+h3 {
+  font-size:;
+}
+h4 {
+  font-size:;
+}
+h5 {
+  font-size:;
+}
+h6 {
+  font-size:;
 }
