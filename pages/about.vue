@@ -1,9 +1,6 @@
 <template>
-  <section class="container">
-    <h1>Hellooo</h1>
-  </section>
+  <div>about</div>
 </template>
-
 <script>
 export default {
   data () {

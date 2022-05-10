@@ -1,9 +1,10 @@
 <template>
-  <section class="container">
-    <h1>Hellooo</h1>
-  </section>
+  <nav>
+    <ul>
+      <li><NuxtLink to="/">Work</NuxtLink></li>
+    </ul>
+  </nav>
 </template>
-
 <script>
 export default {
   data () {
