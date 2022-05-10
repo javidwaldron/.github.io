@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    Hellooo
+    <div class="title">Hellooo</div>
   </section>
 </template>
 
@@ -15,8 +15,11 @@ export default {
 </script>
 
 <style lang="scss">
-.title {
-  font-size: 10vw;
-  font-weight: bold;
-}
+  section {
+    padding: 0;
+    .title {
+      font-size: 10vw;
+      font-weight: bold;
+    }
+  }
 </style>
