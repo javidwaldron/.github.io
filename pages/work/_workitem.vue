@@ -65,10 +65,24 @@
       
       background: none;
     }
-    
+    > h1 {
+      text-align: center;
+    }
     .post-body {
       iframe {
         width: 100%;
+        border-radius: 8px;
+      }
+      
+      hr {
+        border-top: none;
+        color: var(--background-offset);
+      }
+      img{
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
       }
     }
   }
