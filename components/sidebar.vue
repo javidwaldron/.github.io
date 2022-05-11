@@ -1,5 +1,6 @@
 <template>
   <div class="sidebar">
+    <nuxt-link to="/" class="btn back-btn">⬅️ back</nuxt-link>
     <h1>{{name}}</h1>
     <h4>{{title}}</h4>
     <ul class="sidebar-social">
@@ -59,6 +60,18 @@
     width: 100%;
     height: calc(100vh - 100px);
     transition: 335ms ease-in-out all;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 200px;
+      background-image: linear-gradient(to right, transparent, var(--background));
+      opacity: 0;
+      visibility: hidden;
+      z-index:2;
+    }
     &-social {
       display: flex;
       gap: 20px;
@@ -72,6 +85,38 @@
           &:hover {
             color: var(--accent);
           }
+        }
+      }
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      width: 150px;
+      justify-content: flex-end;
+      background: none;
+      transition: 335ms ease-in-out all;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(100%);
+      z-index:3;
+    }
+  }
+</style>
+<style lang="scss">
+  .viewing-work {
+    .sidebar {
+      &:before,
+      .back-btn {
+        opacity: 1;
+        visibility: visible;
+        ~ * {
+          opacity: .2;
+        }
+      }
+      .back-btn {
+        ~ * {
+          opacity: .2;
         }
       }
     }

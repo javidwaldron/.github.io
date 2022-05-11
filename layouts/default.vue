@@ -79,7 +79,6 @@
           transform: translateX(-100%);
           grid-row: 1;
           grid-column: 1;
-          opacity: .2;
         }
         > .container {
           grid-column: 1 / -1;

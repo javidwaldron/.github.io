@@ -1,6 +1,5 @@
 <template>
   <section class="container work-container">
-    <nuxt-link to="/" class="btn back-btn">⬅️ back</nuxt-link>
     <h1>{{ post.title }}</h1>
     <div class="post-body" v-html="post.html"/>
   </section>
@@ -48,7 +47,7 @@
   .work-container {
     position: relative;
     &:before {
-      content: '';
+      // content: '';
       position: absolute;
       top:0;
       right: 100%;
@@ -59,7 +58,7 @@
     .back-btn {
       position: absolute;
       top: 20px;
-      right: 100%;
+      right: 0;
       width: 150px;
       justify-content: flex-end;
       
