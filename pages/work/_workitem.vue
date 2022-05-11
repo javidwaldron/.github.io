@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <NuxtLink to="/" class="btn">⬅️ back</NuxtLink>
+    <NuxtLink class="" to="/" class="btn">⬅️ back</NuxtLink>
     <h1>{{ $route.params.workitem }}</h1>
     <p>this will be a thing, I swear</p>
   </section>
@@ -44,8 +44,8 @@
       top:0;
       right: 100%;
       bottom: 0;
-      width: 100px;
-      background-image: ;
+      width: 25%;
+      background-image: linear-gradient(to right, transparent, var(--background));
     }
   }
 </style>
