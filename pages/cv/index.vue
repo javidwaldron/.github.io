@@ -43,7 +43,6 @@ export default {
     border: none;
     padding: 0;
     &:before {
-      pointer-events: none;
       content: '';
       position: fixed;
       inset: 0;

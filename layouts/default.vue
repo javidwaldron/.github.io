@@ -3,7 +3,9 @@
     <topnav />
     <div class="app-cont">
       <sidebar></sidebar>
-      <nuxt/>
+      <transition name="fade" mode="out-in">
+        <nuxt/>
+      </transition>
     </div>
   </div>
 </template>
@@ -88,5 +90,11 @@
   .container {
     width: 100%;
     padding: .5rem;
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 </style>

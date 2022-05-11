@@ -18,7 +18,7 @@
           name: 'about',
           path: '/about'
         },{
-          name: 'Resume',
+          name: 'Résume',
           path: '/cv'
         },{
           name: 'Reach Out',
