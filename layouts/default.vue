@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" >
     <topnav />
     <div class="app-cont">
       <sidebar></sidebar>
@@ -38,6 +38,7 @@
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       this.checkDeviceTheme(prefersDark);
       prefersDark.addListener((e) => this.checkDeviceTheme(e));
+      console.log(this.$nuxt.$route.name)
     },
     methods: {
       checkDeviceTheme(e) {

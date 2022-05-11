@@ -1,13 +1,33 @@
 <template>
   <nav>
     <ul class="sidebar-nav">
-      <li v-for="(link, idx) in $router.options.routes.reverse()">
+      <li v-for="(link, idx) in routes">
         <NuxtLink :to="link.path">{{ link.name === "index" ? "Work" : link.name }}</NuxtLink>
       </li>
     </ul>
   </nav>
 </template>
-
+<script>
+  export default {
+    data () {
+      return {
+        routes: [{
+          name: 'Work',
+          path: '/'
+        },{
+          name: 'about',
+          path: '/about'
+        },{
+          name: 'Resume',
+          path: '/cv'
+        },{
+          name: 'Reach Out',
+          path: '/contact'
+        }]
+      }
+    }
+  }
+</script>
 <style lang="scss" scoped>
   nav {
     display: flex;

@@ -5,7 +5,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _d8a8f054 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
-const _ef9a912c = () => interopDefault(import('../pages/reach out/index.vue' /* webpackChunkName: "pages/reach out/index" */))
+const _1d238929 = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
 const _d283a522 = () => interopDefault(import('../pages/work/_workitem.vue' /* webpackChunkName: "pages/work/_workitem" */))
 const _2dfb1658 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -25,9 +25,9 @@ export const routerOptions = {
     component: _d8a8f054,
     name: "about"
   }, {
-    path: "/reach%20out",
-    component: _ef9a912c,
-    name: "reach out"
+    path: "/contact",
+    component: _1d238929,
+    name: "contact"
   }, {
     path: "/work/:workitem?",
     component: _d283a522,
