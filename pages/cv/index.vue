@@ -27,7 +27,8 @@ export default {
   data () {
     return {
       modalopen: true,
-      pw: ''
+      pw: '',
+      valid: false
     }
   },
   mounted() {
@@ -35,6 +36,16 @@ export default {
   methods: {
     close() {
       this.modalopen = !this.modalopen
+    },
+    submit() {
+      
+    },
+    validate() {
+      if(this.pw === process.env.cvpw) {
+        this.valid = true
+      } else {
+        this.valid = false
+      }
     }
   }
 }
