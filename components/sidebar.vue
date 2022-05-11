@@ -45,11 +45,15 @@
   h1, h4 {
     margin: 0;
   }
-  .sidebar-social {
-    display: flex;
-    gap: 20px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    &-social {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
   }
 </style>

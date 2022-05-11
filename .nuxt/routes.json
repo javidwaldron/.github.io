@@ -7,11 +7,11 @@
     "_name": "_d8a8f054"
   },
   {
-    "name": "contact",
-    "path": "/contact",
-    "component": "/app/pages/contact/index.vue",
-    "chunkName": "pages/contact/index",
-    "_name": "_1d238929"
+    "name": "reach out",
+    "path": "/reach%20out",
+    "component": "/app/pages/reach out/index.vue",
+    "chunkName": "pages/reach out/index",
+    "_name": "_ef9a912c"
   },
   {
     "name": "index",

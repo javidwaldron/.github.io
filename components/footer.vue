@@ -4,3 +4,10 @@
     <p>All Rights on works Reserved</p>
   </footer>
 </template>
+<style lang="scss" scoped>
+  p {
+    line-height: 1.5;
+    margin: 0;
+    opacity: .4;
+  }
+</style>

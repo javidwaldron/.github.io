@@ -1,7 +1,9 @@
 <template>
-  <div class="app-cont">
-    <sidebar></sidebar>
-    <nuxt/>
+  <div class="app">
+    <div class="app-cont">
+      <sidebar></sidebar>
+      <nuxt/>
+    </div>
   </div>
 </template>
 
@@ -31,8 +33,18 @@
   }
 </script>
 <style lang="scss" scoped>
-  .app-cont {
+  .app {
     display: grid;
-    grid-template-columns: 1fr minmax(1144px, 1fr);
+    grid-template-columns: 1fr minmax(1144px, 1fr) 1fr;
+    width: 100%;
+    height: 100%;
+    
+    &-cont {
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: 1fr minmax(640px, 1fr);
+      width: 100%;
+      height: 100%;
+    }
   }
 </style>

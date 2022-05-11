@@ -2,7 +2,7 @@
   <nav>
     <ul class="sidebar-nav">
       <li v-for="(link, idx) in $router.options.routes.reverse()">
-        <NuxtLink :to="link.path">{{link.name}}</NuxtLink>
+        <NuxtLink :to="link.path">{{ link.name === "index" ? "Work" : link.name }}</NuxtLink>
       </li>
     </ul>
   </nav>
@@ -10,9 +10,7 @@
 <script>
 export default {
   data () {
-    return {
-      posts : null
-    }
+    return {}
   }
 }
 </script>
@@ -28,6 +26,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    width: 100%;
     padding: 0;
     margin: 0;
     list-style-type: none;
