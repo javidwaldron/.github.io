@@ -5,13 +5,16 @@
   --dark-label: #ffffff;
   --dark-background: #040D1D;
   --dark-background-elavated: #213558;
+  --dark-border-color: #426AB0;
   --light-label: #010101;
   --light-background: #F3F6FA;
   --light-background-elavated: #D9E2F3;
+  --light-border-color: #DEE6F5;
   
   --foreground: var(--light-label);
   --background: var(--light-background);
   --background-offset: var(--light-background-elavated);
+  --border-color: var(--light-border-color);
   
   --font-family: "Overpass Mono", monospace;
 }
@@ -20,12 +23,14 @@
     --foreground: var(--dark-label);
     --background: var(--dark-background);
     --background-offset: var(--dark-background-elavated);
+    --border-color: var(--dark-border-color);
   }
 }
 .lights-out {
   --foreground: var(--dark-label);
   --background: var(--dark-background);
   --background-offset: var(--dark-background-elavated);
+  --border-color: var(--dark-border-color);
 }
 *,*:before, *:after {
   box-sizing: border-box;

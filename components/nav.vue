@@ -44,6 +44,10 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+    @media screen and (max-width: 786px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      overflow-x: auto;
+    }
     
     li {
       display: inline-block;

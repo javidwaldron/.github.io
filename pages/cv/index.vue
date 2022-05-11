@@ -118,7 +118,7 @@
       grid-auto-rows: 1fr auto 1fr;
       width: 100%;
       max-width: 600px;
-      border: 1px solid #eee;
+      border: 1px solid var(--border-color);
       border-radius: 8px;
       background-color: var(--background);
       // box-shadow: 0 6px 12px -3px rgba(0,0,0,0.2);
@@ -137,7 +137,7 @@
 
     &--header {
       font-size: 18px;
-      border-bottom:  1px solid #eee;
+      border-bottom:  1px solid var(--border-color);
       h4 {
         line-height: 1;
         margin: 0;
@@ -178,7 +178,7 @@
     }
     &--footer {
       justify-content: flex-end;
-      border-top:  1px solid #eee;
+      border-top:  1px solid var(--border-color);
     }
   }
 </style>

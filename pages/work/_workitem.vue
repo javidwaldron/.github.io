@@ -57,7 +57,7 @@
       
       hr {
         border-top: none;
-        color: var(--background-offset);
+        color: var(--border-color);
       }
       img{
         display: block;
