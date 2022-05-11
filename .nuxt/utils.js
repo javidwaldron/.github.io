@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {}
+      env: {"cvpw":"#XiEkmHNhE5FN3rKT!oK"}
     }
     // Only set once
 

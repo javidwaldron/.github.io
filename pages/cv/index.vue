@@ -8,47 +8,66 @@
       <div class="generic-modal--body">
         <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
         <label>
-          <input type="text" placeholder="put text in me daddy" v-model="pw">
+          <input type="password" placeholder="put text in me daddy" v-model="pw.content" required >
+          <icons name="arrow-right" />
         </label>
       </div>
       <div class="generic-modal--footer">
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary" @click="submit()">Submit</button>
       </div>
     </form>
   </dialog>
 </template>
 <script>
-export default {
-  head() {
-    return {
-      title: `JW | Resume`
-    }
-  },
-  data () {
-    return {
-      modalopen: true,
-      pw: '',
-      valid: false
-    }
-  },
-  mounted() {
-  },
-  methods: {
-    close() {
-      this.modalopen = !this.modalopen
-    },
-    submit() {
-      
-    },
-    validate() {
-      if(this.pw === process.env.cvpw) {
-        this.valid = true
-      } else {
-        this.valid = false
+  import icons from '../../components/iconsys.vue';
+  export default {
+    head() {
+      return {
+        title: `JW | Resume`
       }
+    },
+    data () {
+      return {
+        modalopen: true,
+        pw: {
+          content: '',
+          error: false
+        },
+        valid: false
+      }
+    },
+    mounted() {
+    },
+    methods: {
+      close() {
+        this.modalopen = !this.modalopen
+      },
+      submit() {
+        this.validate();
+
+        if(this.valid) {
+          console.log("nice~ this works!")
+          this.close();
+          // redirect to pdf file
+        } else {
+          console.log("wrong pw, but also, nice~ this works!")
+        }
+      },
+      validate() {
+        if(this.pw.content === process.env.cvpw) {
+          this.valid = true
+          this.pw.error = false
+        } else {
+          this.valid = false
+          this.pw.error = true
+          this.pw.content = ''
+        }
+      }
+    },
+    components: {
+      icons
     }
   }
-}
 </script>
 
 <style lang="scss">
@@ -108,6 +127,9 @@ export default {
       &.handle-overflow {
         max-height: 65vh;
         overflow-y: auto;
+      }
+      label {
+        
       }
     }
     &--footer {

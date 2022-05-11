@@ -3,4 +3,7 @@ export default {
     'public/style.css'
   ],
   buildModules: ["@nuxtjs/svg"],
+  env: {
+    cvpw: process.env.cvpw
+  }
 }
