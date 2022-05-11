@@ -4,14 +4,14 @@
       <form method="dialog">
         <div class="generic-modal--header">
           <h4>Résume</h4>
-          <button class="btn" @click="close()">
+          <button class="btn" @click="modalToggle()">
             <icons name="close" />
           </button>
         </div>
         <div class="generic-modal--body">
           <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
           <label>
-            <input type="password" placeholder="Résume Password" v-model="pw.content" required @keyup.enter.stop="submit()">
+            <input type="password" placeholder="Résume Password" v-model="pw.content" @keyup.enter.stop="submit()" required>
             <icons name="arrow-right" />
           </label>
         </div>
@@ -20,6 +20,12 @@
         </div>
       </form>
     </dialog>
+    <div v-if="valid && !pw.error">
+      Show stuff here if successful
+    </div>
+    <div v-else>
+      <button class="btn btn-secondary" @click="modalToggle()">Try Again</button>
+    </div>
   </section>
 </template>
 <script>
@@ -43,7 +49,7 @@
     mounted() {
     },
     methods: {
-      close() {
+      modalToggle() {
         this.modalopen = !this.modalopen
       },
       submit() {
@@ -51,7 +57,8 @@
 
         if(this.valid) {
           console.log("nice~ this works!")
-          this.close();
+          this.pw.content = ''
+          this.modalToggle();
           // redirect to pdf file
         } else {
           console.log("wrong pw, but also, nice~ this works!")
@@ -66,6 +73,12 @@
           this.pw.error = true
           this.pw.content = ''
         }
+      },
+      validationMessage(e, message) {
+        e.target.setCustomValidity("");
+        if (!e.target.validity.valid) {
+            e.target.setCustomValidity(message);
+        }
       }
     },
     components: {
@@ -76,7 +89,7 @@
 
 <style lang="scss">
   .generic-modal {
-    position: absolute;
+    position: fixed;
     inset: 0;
     display: flex;
     border: none;
