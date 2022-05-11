@@ -1,5 +1,5 @@
 <template>
-  <div>contact</div>
+  <section class="container">contact</section>
 </template>
 <script>
 export default {

@@ -1,22 +1,26 @@
 <template>
-  <dialog class="generic-modal" v-if="modalopen">
-    <form method="dialog">
-      <div class="generic-modal--header">
-        <h3>Résume</h3>
-        <icons @click="close()" name="close" />
-      </div>
-      <div class="generic-modal--body">
-        <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
-        <label>
-          <input type="password" placeholder="Résume Password" v-model="pw.content" required @keyup.enter.stop="submit()">
-          <icons name="arrow-right" />
-        </label>
-      </div>
-      <div class="generic-modal--footer">
-        <button class="btn btn-primary" @click="submit()">Submit</button>
-      </div>
-    </form>
-  </dialog>
+  <section class="container">
+    <dialog class="generic-modal" v-if="modalopen">
+      <form method="dialog">
+        <div class="generic-modal--header">
+          <h4>Résume</h4>
+          <button class="btn" @click="close()">
+            <icons name="close" />
+          </button>
+        </div>
+        <div class="generic-modal--body">
+          <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
+          <label>
+            <input type="password" placeholder="Résume Password" v-model="pw.content" required @keyup.enter.stop="submit()">
+            <icons name="arrow-right" />
+          </label>
+        </div>
+        <div class="generic-modal--footer">
+          <button class="btn btn-primary btn-slim" @click="submit()">Submit</button>
+        </div>
+      </form>
+    </dialog>
+  </section>
 </template>
 <script>
   import icons from '../../components/iconsys.vue';
@@ -111,15 +115,18 @@
     &--header {
       font-size: 18px;
       border-bottom:  1px solid #eee;
-      * {
+      h4 {
         line-height: 1;
         margin: 0;
         padding: 0 !important;
       }
-      .generic-icon {
+      .btn {
+        padding: .5rem;
+        color: currentColor;
+        .generic-icon {
           font-size: 1.3rem;
-          aspect-ratio: 1/1;
-        }
+        } 
+      }
     }
     &--body {
       position: relative;

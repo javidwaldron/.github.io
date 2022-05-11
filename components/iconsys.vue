@@ -6,9 +6,6 @@
     props: {
       name: {
         type: String
-      },
-      action: {
-        type
       }
     },
     mounted() {},

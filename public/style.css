@@ -95,6 +95,11 @@ button {
 .btn:hover {
   filter: brightness(.9);
 }
+.btn.btn-slim {
+  padding: 8px;
+  gap: 5px;
+  font-size: 16px;
+}
 .btn-primary {
   color: var(--light-label);
   background-color: var(--accent);
