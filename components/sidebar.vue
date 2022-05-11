@@ -57,8 +57,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
-    padding: 40px 0;
+    height: calc(100vh - 100px);
+    padding: 40px 10px;
     &-social {
       display: flex;
       gap: 20px;

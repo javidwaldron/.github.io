@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <topnav />
     <div class="app-cont">
       <sidebar></sidebar>
       <nuxt/>
@@ -9,6 +10,7 @@
 
 <script>
   import sidebar from '../components/sidebar.vue';
+  import topnav from '../components/topnav.vue';
   
   export default {
     head: {
@@ -44,21 +46,22 @@
       },
     },
     components: {
-      sidebar
+      sidebar,
+      topnav
     }
   }
 </script>
 <style lang="scss" scoped>
   .app {
     display: grid;
-    grid-template-columns: 1fr minmax(1144px, 1fr) 1fr;
+    grid-template-columns: 1fr minmax(786px, 1144px) 1fr;
     width: 100%;
     height: 100%;
     
     &-cont {
       grid-column: 2;
       display: grid;
-      grid-template-columns: 1fr minmax(640px, 1fr);
+      grid-template-columns: 1fr minmax(320px, 640px);
       width: 100%;
       height: 100%;
     }

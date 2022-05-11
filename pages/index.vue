@@ -1,6 +1,5 @@
 <template>
   <section class="container">
-    Work stuff
     <div class="work">
       <div class="block"></div>
       <div class="block"></div>
