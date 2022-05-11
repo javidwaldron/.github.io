@@ -46,24 +46,6 @@
 <style lang="scss">
   .work-container {
     position: relative;
-    &:before {
-      // content: '';
-      position: absolute;
-      top:0;
-      right: 100%;
-      bottom: 0;
-      width: 25%;
-      background-image: linear-gradient(to right, transparent, var(--background));
-    }
-    .back-btn {
-      position: absolute;
-      top: 20px;
-      right: 0;
-      width: 150px;
-      justify-content: flex-end;
-      
-      background: none;
-    }
     > h1 {
       text-align: center;
     }
@@ -79,9 +61,10 @@
       }
       img{
         display: block;
-        width: 100%;
+        max-width: 100%;
         height: auto;
         border-radius: 8px;
+        margin: auto;
       }
     }
   }

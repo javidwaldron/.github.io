@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <nuxt-link to="/" class="btn back-btn">⬅️ back</nuxt-link>
+    <nuxt-link to="/" class="btn back-btn"><icons name="arrow-left" /> back</nuxt-link>
     <h1>{{name}}</h1>
     <h4>{{title}}</h4>
     <ul class="sidebar-social">
@@ -66,7 +66,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      width: 200px;
+      width: 100%;
       background-image: linear-gradient(to right, transparent, var(--background));
       opacity: 0;
       visibility: hidden;
@@ -95,6 +95,11 @@
       width: 150px;
       justify-content: flex-end;
       background: none;
+      line-height: 1;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Barlow", sans-serif;
       transition: 335ms ease-in-out all;
       opacity: 0;
       visibility: hidden;
@@ -115,6 +120,7 @@
         }
       }
       .back-btn {
+        transform: translateX(0);
         ~ * {
           opacity: .2;
         }
