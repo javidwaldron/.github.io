@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li><NuxtLink to="/">Work</NuxtLink></li>
+      <li><NuxtLink :to="link.path" v-for="(link, idx) in $router.options.routes">{{link.name}}</NuxtLink></li>
     </ul>
   </nav>
 </template>

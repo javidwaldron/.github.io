@@ -6,13 +6,14 @@
       Nuxt replace automatically the nuxt component by <router-view></router-view>
     -->
     <nuxt/>
-    
+    <navigation></navigation>
     <my-footer/>
   </div>
 </template>
 
 <script>
   import MyFooter from '../components/footer.vue';
+  import navigation from '../components/nav.vue';
   
 export default {
   head: {
@@ -30,8 +31,12 @@ export default {
       }
     ]
   },
+  mounted() {
+    console.log(this.$router.options.routes)
+  },
   components: {
-    MyFooter
+    MyFooter,
+    navigation
   }
 }
 </script>

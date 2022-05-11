@@ -2,16 +2,16 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/app/pages/about.vue",
-    "chunkName": "pages/about",
-    "_name": "_0e433b93"
+    "component": "/app/pages/about/index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_d8a8f054"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "/app/pages/contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_e64111b4"
+    "component": "/app/pages/contact/index.vue",
+    "chunkName": "pages/contact/index",
+    "_name": "_1d238929"
   },
   {
     "name": "index",
