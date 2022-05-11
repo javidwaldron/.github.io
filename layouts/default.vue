@@ -61,7 +61,7 @@
     grid-template-columns: 1fr minmax(786px, 1144px) 1fr;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     @media screen and (max-width: 786px) {
       grid-template-columns: 20px minmax(100px, 1fr) 20px;
     }

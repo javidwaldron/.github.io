@@ -60,6 +60,8 @@ body {
 }
 @media screen and (max-width: 786px) {
   body {
+    height: auto;
+    min-height: 100%;
     overflow-x: hidden;
   }
 }
