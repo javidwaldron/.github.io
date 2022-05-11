@@ -2,7 +2,7 @@
   <section class="container">
     <div class="work">
       <div class="block">
-        <NuxtLink to="/work/job01" class="btn btn-secondary">Go TO Job 01</NuxtLink>
+        <nuxt-link to="/work/job01" class="btn btn-secondary">Go TO Job 01</nuxt-link>
       </div>
       <div class="block"></div>
       <div class="block"></div>

@@ -1,5 +1,6 @@
 dependencies:
   '@nuxtjs/svg': 0.4.0
+  '@tryghost/content-api': 1.9.5
   axios: 0.27.2
   nuxt: 2.15.8
   sass: 1.51.0
@@ -1720,6 +1721,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==
+  /@tryghost/content-api/1.9.5:
+    dependencies:
+      axios: 0.27.2
+    dev: false
+    resolution:
+      integrity: sha512-rIovkOw1eqt9NZeAGEceYc737qpelj762EC+TCgXmniqNactOcnSxgbK7ksEegJA/ZAEK49nBiIRINoTxQAyOA==
   /@types/html-minifier-terser/5.1.2:
     dev: false
     resolution:
@@ -9005,6 +9012,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@nuxtjs/svg': ^0.4.0
+  '@tryghost/content-api': ^1.9.5
   axios: ^0.27.2
   nuxt: ^2.15.8
   sass: ^1.51.0

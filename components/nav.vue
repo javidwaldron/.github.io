@@ -2,7 +2,7 @@
   <nav>
     <ul class="sidebar-nav">
       <li v-for="(link, idx) in routes">
-        <NuxtLink :to="link.path">{{ link.name === "index" ? "Work" : link.name }}</NuxtLink>
+        <nuxt-link :to="link.path">{{ link.name === "index" ? "Work" : link.name }}</nuxt-link>
       </li>
     </ul>
   </nav>

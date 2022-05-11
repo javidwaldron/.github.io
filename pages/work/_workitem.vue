@@ -1,14 +1,22 @@
 <template>
   <section class="container">
-    <NuxtLink class="" to="/" class="btn">⬅️ back</NuxtLink>
+    <nuxt-link to="/" class="btn">⬅️ back</nuxt-link>
     <h1>{{ $route.params.workitem }}</h1>
+    <h1>{{ post.title }}</h1>
     <p>this will be a thing, I swear</p>
   </section>
 </template>
 
 <script>
+  import { getSinglePost } from '../../api/posts';
   
   export default {
+    async asyncData ({ params }) {
+      const post = await getSinglePost(params.slug);
+      return { 
+        post: post 
+      }
+    },
     head() {
       return {
         title: `JW | Work | ${this.title}`,
