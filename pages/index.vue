@@ -1,20 +1,25 @@
 <template>
   <section class="container">
     <div class="work">
-      <div class="block" v-for="post in posts" :style="'background-image: url(' + post.feature_image + ');'">
-        <nuxt-link :to="'/work/' + post.slug" class="btn">Go {{post.title}}</nuxt-link>
+      <div class="block" v-for="(post, idx) in posts" :style="'background-image: url(' + post.feature_image + ');'">
+        <nuxt-link :to="'/work/' + post.slug">
+          <div class="block-meta">
+            <div class="block-meta-title">
+              <h6>{{ '0'+(idx + 1)}}</h6><h5>{{post.title}}</h5>
+            </div>
+            <div class="block-meta-arrow">
+              <icons name="arrow-right" />
+            </div>
+          </div>
+        </nuxt-link>
       </div>
-      <div class="block"></div>
-      <div class="block"></div>
-      <div class="block"></div>
-      <div class="block"></div>
-      <div class="block"></div>
     </div>
   </section>
 </template>
 
 <script>
   import { getPosts } from '../api/posts';
+  import icons from '../components/iconsys.vue';
 
   export default {
     async asyncData () {
@@ -28,6 +33,9 @@
       return {
         posts : null
       }
+    },
+    components: {
+      icons
     }
   }
 </script>
