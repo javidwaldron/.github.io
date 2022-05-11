@@ -19,6 +19,9 @@
     "url": "https://glitch.com/edit/#!/glitch-hello-node"
   },
   "license": "MIT",
+  "glitch": {
+    "projectType": "generated_static"
+  },
   "keywords": [
     "node",
     "glitch",

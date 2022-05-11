@@ -46,8 +46,13 @@
     margin: 0;
   }
   .sidebar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
+    padding: 40px 0;
     &-social {
       display: flex;
       gap: 20px;
