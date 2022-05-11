@@ -1,15 +1,15 @@
 <template>
-  <div :class="[$style.ltmIcon, modClasses]" v-html="require(`./icons/${this.fixedName}.svg`)"></div>
+  <div v-html="require(`./icons/${this.fixedName}.svg`)"></div>
 </template>
 <script>
   export default {
     props: {
       name: {
         type: String
-      },
-      modClasses: {
-        type: String
       }
+    },
+    mounted() {
+      console.log("name?", this.fixedName)
     },
     computed: {
       fixedName() {

@@ -3,7 +3,12 @@
     <h1>{{name}}</h1>
     <h4>{{title}}</h4>
     <ul class="sidebar-social">
-      <li v-for="item in social" :key="item.name"><a :href="item.url">{{item.name}}</a></li>
+      <li v-for="item in social" :key="item.name">
+        <a :href="item.url">
+          {{item.name}}
+          <glyph :name="item.name" />
+        </a>
+      </li>
     </ul>
     <navigation />
     <smallfooter />
@@ -11,8 +16,9 @@
 </template>
 
 <script>
-  import navigation from '../components/nav.vue';
-  import smallfooter from '../components/footer.vue';
+  import navigation from './nav.vue';
+  import smallfooter from './footer.vue';
+  import glyph from './iconsys.vue';
   
   export default {
     data () {
@@ -36,7 +42,8 @@
     },
     components: {
       navigation,
-      smallfooter
+      smallfooter,
+      glyph
     }
   }
 </script>
