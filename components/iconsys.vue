@@ -8,9 +8,7 @@
         type: String
       }
     },
-    mounted() {
-      console.log("name?", this.fixedName)
-    },
+    mounted() {},
     computed: {
       fixedName() {
         return this.name.toLowerCase();

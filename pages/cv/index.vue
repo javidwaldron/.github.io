@@ -1,12 +1,12 @@
 <template>
-  <dialog class="generic-modal" open>
+  <dialog class="generic-modal" :open="modalopen">
     <form method="dialog">
       <div class="generic-modal--header">
         <h3>Resume</h3>
-        <button class="btn btn-default-borderless btn-square btn-rounded">&times;</button>
+        <button class="btn btn-default-borderless btn-square btn-rounded" @click="close()">&times;</button>
       </div>
       <div class="generic-modal--body">
-        <p>The contents of this CV contain sensitive information, so the contents are stowed under lock & key. If I’ve given you the password to access this, enter it below.</p>
+        <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
         <label>
           <input type="text" placeholder="put text in me daddy">
         </label>
@@ -21,7 +21,14 @@
 export default {
   data () {
     return {
-      posts : null
+      modalopen: false
+    }
+  },
+  methods: {
+    close() {
+      // this.modalopen = !this.modalopen
+      let dialog = e.explicitOriginalTarget.form.parentElement;
+      dialog.close('')
     }
   }
 }
@@ -74,6 +81,9 @@ export default {
         line-height: 1;
         margin: 0;
         padding: 0 !important;
+      }
+      button {
+        font-size: 1.5rem;
       }
     }
     &--body {
