@@ -35,4 +35,17 @@
   }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .container {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top:0;
+      right: 100%;
+      bottom: 0;
+      width: 100px;
+      background-image: ;
+    }
+  }
+</style>

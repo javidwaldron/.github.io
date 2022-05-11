@@ -19,6 +19,7 @@
                    required>
             <icons name="arrow-right" />
           </label>
+          <small style="color: red;" v-if="pw.error">Please Enter provided Password</small>
         </div>
         <div class="generic-modal--footer">
           <button class="btn btn-primary btn-slim" @click="submit()">Submit</button>
@@ -29,7 +30,7 @@
       Show stuff here if successful
     </div>
     <div v-else>
-      <button class="btn btn-secondary" @click="modalToggle()">Try Again</button>
+      <button v-if="previouslySubmitted" class="btn btn-secondary" @click="modalToggle()">Try Again</button>
     </div>
   </section>
 </template>
@@ -48,21 +49,23 @@
           content: '',
           error: false
         },
-        valid: false
+        valid: false,
+        previouslySubmitted: false
       }
     },
     mounted() {
     },
     methods: {
       modalToggle() {
-        this.modalopen = !this.modalopen
+        this.modalopen = !this.modalopen;
+        this.previouslySubmitted = true;
       },
       submit() {
         this.validate();
 
         if(this.valid) {
           console.log("nice~ this works!")
-          this.pw.content = ''
+          this.pw.content = '';
           this.modalToggle();
           // redirect to pdf file
         } else {
@@ -83,6 +86,7 @@
         if (!e.target.validity.valid) {
           e.target.setCustomValidity(message);
         } else {
+          this.pw.error = false
           e.target.setCustomValidity("");
         }
       }
