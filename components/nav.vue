@@ -49,6 +49,7 @@
       display: inline-block;
       width: 100%;
       max-width: 140px;
+      user-select: none;
       
       a {
         position: relative;

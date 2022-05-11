@@ -11,7 +11,7 @@
   export default {
     head() {
       return {
-        title: `Work | ${this.title}`,
+        title: `JW | Work | ${this.title}`,
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {

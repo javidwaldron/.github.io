@@ -19,6 +19,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: `JW | Resume`
+    }
+  },
   data () {
     return {
       modalopen: true,

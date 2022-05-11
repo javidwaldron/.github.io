@@ -15,28 +15,30 @@
   import topnav from '../components/topnav.vue';
   
   export default {
-    head: {
-      title: 'Javid Waldron',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', content: "Nuxt.js project" }
-      ],
-      link: [
-        { 
-         rel: 'icon', 
-         type: 'image/x-icon', 
-         href: 'https://cdn.glitch.global/c2f99bc4-f921-4cee-90b5-df019f304eee/favicon.png?v=1652244090700' 
-        }
-      ]
+    head() {
+      return {
+        title: 'Javid Waldron',
+        meta: [
+          { charset: 'utf-8' },
+          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          { hid: 'description', content: "Nuxt.js project" }
+        ],
+        link: [
+          { 
+           rel: 'icon', 
+           type: 'image/x-icon', 
+           href: 'https://cdn.glitch.global/c2f99bc4-f921-4cee-90b5-df019f304eee/favicon.png?v=1652244090700' 
+          }
+        ]
+      }
     },
     data() {
       return {
-        darkModeEnabled: false
+        prefersDark: false
       }
     },
     mounted() {
-      this.darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       this.checkDeviceTheme(prefersDark);
       prefersDark.addListener((e) => this.checkDeviceTheme(e));
@@ -44,7 +46,7 @@
     methods: {
       checkDeviceTheme(e) {
         // document.querySelectorAll('[name="theme-color"]')[0].content = window.getComputedStyle(document.documentElement).backgroundColor;
-        this.darkModeEnabled = e.matches;
+        this.prefersDark = e.matches;
       },
     },
     components: {

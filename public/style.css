@@ -22,6 +22,11 @@
     --background-offset: var(--dark-background-elavated);
   }
 }
+.lights-out {
+  --foreground: var(--dark-label);
+  --background: var(--dark-background);
+  --background-offset: var(--dark-background-elavated);
+}
 *,*:before, *:after {
   box-sizing: border-box;
 }

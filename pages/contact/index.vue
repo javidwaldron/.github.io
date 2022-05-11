@@ -3,6 +3,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: `JW | Contact`
+    }
+  },
   data () {
     return {
       posts : null
