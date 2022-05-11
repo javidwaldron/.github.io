@@ -17,6 +17,11 @@
   }
 </script>
 <style lang="scss">
+  .generic-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
   svg {
     display: block;
     color: inherit;

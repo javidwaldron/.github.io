@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <NuxtLink to="/">⬅️ back</NuxtLink>
+    <NuxtLink to="/" class="btn">⬅️ back</NuxtLink>
     <h1>{{ $route.params.workitem }}</h1>
     <p>this will be a thing, I swear</p>
   </section>

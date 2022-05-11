@@ -69,6 +69,9 @@
       li {
         a {
           color: currentColor;
+          &:hover {
+            color: var(--accent);
+          }
         }
       }
     }

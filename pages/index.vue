@@ -2,7 +2,7 @@
   <section class="container">
     <div class="work">
       <div class="block">
-        <NuxtLink to="/work/job01">Go TO Job 01</NuxtLink>
+        <NuxtLink to="/work/job01" class="btn btn-secondary">Go TO Job 01</NuxtLink>
       </div>
       <div class="block"></div>
       <div class="block"></div>
@@ -34,8 +34,10 @@ export default {
       display: block;
       width: 100%;
       height: 300px;
-      background-color: var(--accent);
+      background-color: var(--background-offset);
       transition: 335ms ease-in-out all;
+      border-radius: 8px;
+      overflow: hidden;
     }
   }
 </style>
