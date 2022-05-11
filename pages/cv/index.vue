@@ -1,5 +1,5 @@
 <template>
-  <dialog class="generic-modal" :open="modalopen">
+  <dialog class="generic-modal" v-if="modalopen">
     <form method="dialog">
       <div class="generic-modal--header">
         <h3>Resume</h3>
@@ -8,7 +8,7 @@
       <div class="generic-modal--body">
         <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
         <label>
-          <input type="text" placeholder="put text in me daddy">
+          <input type="text" placeholder="put text in me daddy" v-model="pw">
         </label>
       </div>
       <div class="generic-modal--footer">
@@ -21,14 +21,15 @@
 export default {
   data () {
     return {
-      modalopen: false
+      modalopen: true,
+      pw: ''
     }
+  },
+  mounted() {
   },
   methods: {
     close() {
-      // this.modalopen = !this.modalopen
-      let dialog = e.explicitOriginalTarget.form.parentElement;
-      dialog.close('')
+      this.modalopen = !this.modalopen
     }
   }
 }
