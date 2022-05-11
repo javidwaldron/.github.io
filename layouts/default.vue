@@ -1,5 +1,5 @@
 <template>
-  <div class="app" >
+  <div class="app" :class="{'viewing-work' : $nuxt.$route.name.includes('work')}">
     <topnav />
     <div class="app-cont">
       <sidebar></sidebar>
@@ -38,7 +38,6 @@
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       this.checkDeviceTheme(prefersDark);
       prefersDark.addListener((e) => this.checkDeviceTheme(e));
-      console.log(this.$nuxt.$route.name)
     },
     methods: {
       checkDeviceTheme(e) {
@@ -65,6 +64,14 @@
       grid-template-columns: 1fr minmax(320px, 640px);
       width: 100%;
       height: 100%;
+    }
+    &.viewing-work {
+      .app-cont {
+        > .container {
+        grid-column: 1 / -1;
+grid-row: 1 / -1;
+        }
+      }
     }
   }
   .container {

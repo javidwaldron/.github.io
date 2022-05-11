@@ -9,7 +9,7 @@
   
   export default {
     head: {
-      title: 'work | ' + this.$route.params.workitem 
+      title: 'work | '
     },
     data () {
       return {}
