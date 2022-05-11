@@ -19,13 +19,13 @@
     },
     head() {
       return {
-        title: `JW | Work | ${this.title}`,
+        title: `JW | Work | ${this.post.title}`,
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: this.hid,
-            name: this.name,
-            content: this.content
+            hid: this.post.id,
+            name: this.post.meta_title,
+            content: this.post.meta_description
           }
         ]
       }
