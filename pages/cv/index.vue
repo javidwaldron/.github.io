@@ -129,7 +129,16 @@
         overflow-y: auto;
       }
       label {
-        
+        .generic-icon {
+          position: absolute;
+          top:0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          aspect-ratio: 1/1;
+        }
       }
     }
     &--footer {
