@@ -31,9 +31,7 @@ export default {
       }
     ]
   },
-  mounted() {
-    console.log(this.$router.options.routes)
-  },
+  mounted() {},
   components: {
     MyFooter,
     navigation
