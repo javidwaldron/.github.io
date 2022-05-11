@@ -64,12 +64,23 @@
       grid-template-columns: 1fr minmax(320px, 640px);
       width: 100%;
       height: 100%;
+      > .container {
+        position: relative;
+        z-index: 2;
+      }
     }
     &.viewing-work {
       .app-cont {
+        .sidebar {
+          transform: translateX(-100%);
+          grid-row: 1;
+          grid-column: 1;
+          opacity: .2;
+        }
         > .container {
-        grid-column: 1 / -1;
-grid-row: 1 / -1;
+          grid-column: 1 / -1;
+          grid-row: 1 / -1;
+          transition: 335ms ease-in-out all;
         }
       }
     }

@@ -29,11 +29,13 @@ export default {
     grid-template-columns: 1fr;
     gap: 1rem;
     width: 100%;
+    transition: 335ms ease-in-out all;
     .block {
       display: block;
       width: 100%;
       height: 300px;
       background-color: var(--accent);
+      transition: 335ms ease-in-out all;
     }
   }
 </style>

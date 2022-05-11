@@ -14,6 +14,13 @@
     "_name": "_1d238929"
   },
   {
+    "name": "cv",
+    "path": "/cv",
+    "component": "/app/pages/cv/index.vue",
+    "chunkName": "pages/cv/index",
+    "_name": "_09fb9d20"
+  },
+  {
     "name": "work-workitem",
     "path": "/work/:workitem?",
     "component": "/app/pages/work/_workitem.vue",

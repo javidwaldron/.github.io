@@ -58,6 +58,7 @@
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 100px);
+    transition: 335ms ease-in-out all;
     &-social {
       display: flex;
       gap: 20px;

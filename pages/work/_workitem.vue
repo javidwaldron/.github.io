@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <NuxtLink to="/">⬅️ back</NuxtLink>
     <h1>{{ $route.params.workitem }}</h1>
     <p>this will be a thing, I swear</p>
   </div>
