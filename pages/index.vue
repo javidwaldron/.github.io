@@ -1,6 +1,14 @@
 <template>
   <section class="container">
     Work stuff
+    <div class="work">
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+      <div class="block"></div>
+    </div>
   </section>
 </template>
 
@@ -14,4 +22,18 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .work {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    padding: 40px 10px;
+    .block {
+      display: block;
+      width: 100%;
+      height: 300px;
+      background-color: var(--accent);
+    }
+  }
+</style>

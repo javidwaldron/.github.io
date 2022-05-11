@@ -1,5 +1,5 @@
 <template>
-  <div v-html="require(`./icons/${this.fixedName}.svg`)"></div>
+  <div v-html="require(`./icons/${this.fixedName}.svg?raw`)"></div>
 </template>
 <script>
   export default {

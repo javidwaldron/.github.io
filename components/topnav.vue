@@ -40,37 +40,10 @@
       }
     },
     components: {
-      navigation,
-      smallfooter,
       icons
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  h1, h4 {
-    margin: 0;
-  }
-  .sidebar {
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    padding: 40px 0;
-    &-social {
-      display: flex;
-      gap: 20px;
-      list-style-type: none;
-      margin: 0;
-      padding: 1rem 0;
-      font-size: 24px;
-      li {
-        a {
-          color: currentColor;
-        }
-      }
-    }
-  }
 </style>
