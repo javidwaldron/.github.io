@@ -2,14 +2,12 @@
   <section class="container">
     <div class="work">
       <div class="block" v-for="(post, idx) in posts" :style="'background-image: url(' + post.feature_image + ');'">
-        <nuxt-link :to="'/work/' + post.slug">
+        <nuxt-link class="block-anchor" :to="'/work/' + post.slug">
           <div class="block-meta">
             <div class="block-meta-title">
-              <h6>{{ '0'+(idx + 1)}}</h6><h5>{{post.title}}</h5>
+              <h6>{{ '0' + (idx + 1)}}</h6><h5>{{post.title}}</h5>
             </div>
-            <div class="block-meta-arrow">
-              <icons name="arrow-right" />
-            </div>
+            <icons name="arrow-right" />
           </div>
         </nuxt-link>
       </div>
@@ -50,10 +48,8 @@
     .block {
       position: relative;
       display: flex;
-      align-items: flex-end;
       width: 100%;
       height: 300px;
-      padding: 1rem;
       background-color: var(--background-offset);
       background-size: cover;
       background-position: center;
@@ -68,8 +64,56 @@
         left: 0;
         bottom: 0;
         right: 0;
-        height: 100px;
+        height: 50%;
         background-image: linear-gradient(to top, var(--background), transparent);
+        transition: 335ms ease-in-out all;
+      }
+      &:hover {
+        &:before {
+          height: 100%;
+        }
+        a {
+          text-decoration: none;
+          color: currentColor;
+        }
+        .block-meta {
+          .generic-icon {
+            &:before {
+              pointer-events: none;
+              content:'';
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              width: 25%;
+              height: 25%;
+              background-image: radial-gradient(to center, transparent, var(--accent));
+              transition: 335ms ease-in-out all;
+            }
+          }
+        }
+      }
+      &-anchor {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: flex-end;
+        color: var(--foreground);
+        padding: 1rem;
+      }
+      &-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &-title {
+          display: flex;
+          align-items: center;
+          gap: .5rem;
+          * {
+            margin: 0;
+          }
+        }
       }
     }
   }
