@@ -1,8 +1,8 @@
 <template>
   <section class="container">
     <nuxt-link to="/" class="btn">⬅️ back</nuxt-link>
-    <h1>{{ $route.params.workitem }}</h1>
-    <p>this will be a thing, I swear</p>
+    <h1>{{ post.title }}</h1>
+    <div v-html="post.html"/>
   </section>
 </template>
 
@@ -38,7 +38,8 @@
         content: 'My custom description'
       }
     },
-    components: {
+    mounted() {
+      console.log(this.post)
     }
   }
 </script>

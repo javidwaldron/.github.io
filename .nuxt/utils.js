@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"cvpw":"#XiEkmHNhE5FN3rKT!oK"}
+      env: {"cvpw":"#XiEkmHNhE5FN3rKT!oK","API_URL":"https://ltrdmrk-cms.glitch.me","CONTENT_KEY":"716e9f2618b2c3a8bffc242737"}
     }
     // Only set once
 

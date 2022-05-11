@@ -1,8 +1,8 @@
 <template>
   <section class="container">
     <div class="work">
-      <div class="block">
-        <nuxt-link to="/work/job01" class="btn btn-secondary">Go TO Job 01</nuxt-link>
+      <div class="block" v-for="post in posts">
+        <nuxt-link :to="'/work/' + post.slug" class="btn btn-secondary">Go {{post.title}}</nuxt-link>
       </div>
       <div class="block"></div>
       <div class="block"></div>
@@ -14,13 +14,21 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      posts : null
+  import { getPosts } from '../api/posts';
+
+  export default {
+    async asyncData () {
+      const posts = await getPosts();
+      return { 
+        posts: posts 
+      }
+    },
+    data () {
+      return {
+        posts : null
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

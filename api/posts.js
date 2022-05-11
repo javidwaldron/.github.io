@@ -2,8 +2,8 @@ import GhostContentAPI from "@tryghost/content-api";
 
 // Create API instance with site credentials
 const api = new GhostContentAPI({
-  url: 'https://ltrdmrk-cms.glitch.me',
-  key: '716e9f2618b2c3a8bffc242737',
+  url: process.env.API_URL,
+  key: process.env.CONTENT_KEY,
   version: "v3"
 });
 
