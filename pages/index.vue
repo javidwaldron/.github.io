@@ -79,15 +79,8 @@
         .block-meta {
           .generic-icon {
             &:before {
-              pointer-events: none;
-              content:'';
-              position: absolute;
-              bottom: 0;
-              right: 0;
-              width: 25%;
-              height: 25%;
-              background-image: radial-gradient(to center, transparent, var(--accent));
-              transition: 335ms ease-in-out all;
+              transform: translate(0,0);
+              opacity: 1;
             }
           }
         }
@@ -112,6 +105,24 @@
           gap: .5rem;
           * {
             margin: 0;
+          }
+        }
+        .generic-icon {
+          &:before {
+            pointer-events: none;
+            content:'';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 25%;
+            aspect-ratio:1/1;
+            transform: translate(100%,100%);
+            opacity: 0;
+            background-image: radial-gradient(circle at bottom right, var(--accent), transparent 70%);
+            transition: 775ms ease-in-out all;
+          }
+          svg {
+            position: relative;
           }
         }
       }

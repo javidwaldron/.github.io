@@ -1,0 +1,292 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20220511.211654.4272.0.001.json",
+    "dumpEventTime": "2022-05-11T21:16:54Z",
+    "dumpEventTimeStamp": "1652303814510",
+    "processId": 4272,
+    "cwd": "/app",
+    "commandLine": [
+      "node",
+      "/app/node_modules/.bin/../../../rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/nuxt/bin/nuxt.js"
+    ],
+    "nodejsVersion": "v12.0.0",
+    "glibcVersionRuntime": "2.23",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.0.0",
+      "v8": "7.4.288.21-node.16",
+      "uv": "1.28.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.0.0/node-v12.0.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.0.0/node-v12.0.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.4.0-1128-aws",
+    "osVersion": "#142-Ubuntu SMP Fri Apr 16 12:42:33 UTC 2021",
+    "osMachine": "x86_64",
+    "host": "1123377ac9d8"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000a94fed",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [node]"
+    },
+    {
+      "pc": "0x000000000097b219",
+      "symbol": "node::OnFatalError(char const*, char const*) [node]"
+    },
+    {
+      "pc": "0x0000000000af2d0e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000000000af3089",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [node]"
+    },
+    {
+      "pc": "0x0000000000efe235",
+      "symbol": " [node]"
+    },
+    {
+      "pc": "0x0000000000f08b9b",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000000000f098b7",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]"
+    },
+    {
+      "pc": "0x0000000000f0c355",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [node]"
+    },
+    {
+      "pc": "0x0000000000ed7380",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [node]"
+    },
+    {
+      "pc": "0x00000000011a917e",
+      "symbol": "v8::internal::Runtime_AllocateInNewSpace(int, unsigned long*, v8::internal::Isolate*) [node]"
+    },
+    {
+      "pc": "0x0000000001a5c1a2",
+      "symbol": " [node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2170904576,
+    "totalCommittedMemory": 2166231824,
+    "usedMemory": 2151309192,
+    "availableMemory": 39720064,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 32024,
+        "capacity": 523976,
+        "used": 31712,
+        "available": 492264
+      },
+      "new_space": {
+        "memorySize": 8388608,
+        "committedMemory": 5615360,
+        "capacity": 4191808,
+        "used": 1613464,
+        "available": 2578344
+      },
+      "old_space": {
+        "memorySize": 2105139200,
+        "committedMemory": 2104263624,
+        "capacity": 2103386744,
+        "used": 2097839816,
+        "available": 5546928
+      },
+      "code_space": {
+        "memorySize": 3833856,
+        "committedMemory": 3566976,
+        "capacity": 3088032,
+        "used": 3088032,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 7868416,
+        "committedMemory": 7603632,
+        "capacity": 3781120,
+        "used": 3781120,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 43945984,
+        "committedMemory": 43945984,
+        "capacity": 43854408,
+        "used": 43854408,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 1204224,
+        "committedMemory": 1204224,
+        "capacity": 1100640,
+        "used": 1100640,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 4191808,
+        "used": 0,
+        "available": 4191808
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 179.48,
+    "kernelCpuSeconds": 11.428,
+    "cpuConsumptionPercent": 7.8563,
+    "maxRss": 2693214208,
+    "pageFaults": {
+      "IORequired": 14,
+      "IONotRequired": 1184472
+    },
+    "fsActivity": {
+      "reads": 10206,
+      "writes": 20472
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 80.724,
+    "kernelCpuSeconds": 4.508,
+    "cpuConsumptionPercent": 3.50749,
+    "fsActivity": {
+      "reads": 8954,
+      "writes": 32
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "INSIDE_DOCKER": "true",
+    "LANGUAGE": "en_US.UTF-8",
+    "cvpw": "#XiEkmHNhE5FN3rKT!oK",
+    "HOSTNAME": "1123377ac9d8",
+    "SHLVL": "3",
+    "PROJECT_INVITE_TOKEN": "18fc4fac-fbc9-422f-a56e-e403a0ecd109",
+    "HOME": "/app",
+    "PORT": "3000",
+    "ENVIRONMENT": "production",
+    "USER_PATH": "/app/bin:/app/.local/bin:/app/node_modules/.bin:/opt/rust/cargo/bin:/opt/swift/usr/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PROJECT_DOMAIN": "jw-works-bones",
+    "DEFAULT_NODE_DIR": "/opt/nvm/versions/node/v10/bin",
+    "WATCHER_SENTRY_DSN": "https://fea78dd2fd7e4d5ba7267f6d91460f48@sentry.io/1837769",
+    "PROJECT_NAME": "jw-works-bones",
+    "HOST_ADDRESS": "172.17.0.1",
+    "APP_TYPES_DIR": "/opt/watcher/app-types",
+    "_": "/app/node_modules/.bin/nuxt",
+    "TERM": "xterm",
+    "DPKG_FRONTEND": "noninteractive",
+    "RUSTUP_HOME": "/opt/rust/multirust",
+    "PROJECT_REMIX_CHAIN": "[\"a0fcd798-9ddf-42e5-8205-17158d4bf5bb\",\"c62efef6-1e75-45cf-b248-afeccdda9477\"]",
+    "PATH": "/app/bin:/app/.local/bin:/app/node_modules/.bin:/opt/rust/cargo/bin:/opt/swift/usr/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/nvm/versions/node/v12/bin",
+    "PROJECT_ID": "c2f99bc4-f921-4cee-90b5-df019f304eee",
+    "LANG": "en_US.UTF-8",
+    "DEFAULT_NODE_VERSION": "10",
+    "DEBIAN_FRONTEND": "noninteractive",
+    "WATCHER_MD5": "de67d4f95fcebd588953dd04584409c5",
+    "HOST_HOSTNAME": "docker-worker-0AA7C4",
+    "NODE_PATH": "/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/.registry.npmjs.org/nuxt/2.15.8/node_modules/nuxt/bin/nuxt.js/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/.registry.npmjs.org/nuxt/2.15.8/node_modules/nuxt/bin/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/.registry.npmjs.org/nuxt/2.15.8/node_modules/nuxt/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/.registry.npmjs.org/nuxt/2.15.8/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/.registry.npmjs.org/nuxt/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/.registry.npmjs.org/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules:/rbd/pnpm-volume/node_modules:/rbd/node_modules:/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/nuxt/bin/nuxt.js/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/nuxt/bin/node_modules:/rbd/pnpm-volume/c2f99bc4-f921-4cee-90b5-df019f304eee/node_modules/nuxt/node_modules",
+    "CONTENT_KEY": "716e9f2618b2c3a8bffc242737",
+    "NPM_ONLY": "false",
+    "GEM_HOME": "/app/.local/gems",
+    "LC_ALL": "en_US.UTF-8",
+    "PWD": "/app",
+    "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64",
+    "GLITCH_SHARED_INCLUDES_LEGACY_CLS": "true",
+    "API_SERVER_EXTERNAL": "https://api.glitch.com",
+    "CARGO_HOME": "/opt/rust/cargo",
+    "ENABLE_SERVER_SIDE_MONITORING": "false",
+    "API_URL": "https://ltrdmrk-cms.glitch.me",
+    "NODE_ENV": "development",
+    "_applied": "true",
+    "VUE_ENV": "server"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/lib/x86_64-linux-gnu/libnss_files.so.2",
+    "/lib/x86_64-linux-gnu/libnss_dns.so.2",
+    "/lib/x86_64-linux-gnu/libresolv.so.2"
+  ]
+}
