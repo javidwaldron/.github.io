@@ -11,7 +11,12 @@
         <div class="generic-modal--body">
           <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
           <label>
-            <input type="password" placeholder="Résume Password" v-model="pw.content" @keyup.enter.stop="submit()" required>
+            <input type="password" 
+                   placeholder="Résume Password" 
+                   v-model="pw.content" 
+                   @keyup.enter.stop="submit()" 
+                   @invalid="validationMessage($event, 'Please Enter provided Password')"
+                   required>
             <icons name="arrow-right" />
           </label>
         </div>
@@ -75,9 +80,10 @@
         }
       },
       validationMessage(e, message) {
-        e.target.setCustomValidity("");
         if (!e.target.validity.valid) {
-            e.target.setCustomValidity(message);
+          e.target.setCustomValidity(message);
+        } else {
+          e.target.setCustomValidity("");
         }
       }
     },

@@ -75,6 +75,11 @@ h5 {font-size: 1.333rem;}
 
 small, .text_small {font-size: 0.75rem;}
 
+form:not([method="dialog"]) {
+  display: grid;
+  gap: 16px;
+}
+
 button {
   cursor: pointer;
   background: none;
@@ -116,12 +121,14 @@ label {
   display: block;
   font-family: var(--font-family);
 }
+textarea,
 input {
   display: block;
   border: none;
   outline: none;
   font-family: var(--font-family);
 }
+textarea,
 input[type="text"],
 input[type="password"] {
   background-color: var(--background-offset);
