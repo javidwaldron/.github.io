@@ -2,10 +2,10 @@
   <div class="sidebar">
     <h1>{{name}}</h1>
     <h4>{{title}}</h4>
-    <navigation />
-    <ul>
+    <ul class="sidebar-social">
       <li v-for="item in social" :key="item.name"><a :href="item.url">{{item.name}}</a></li>
     </ul>
+    <navigation />
     <smallfooter />
   </div>
 </template>
@@ -18,7 +18,7 @@
     data () {
       return {
         name : 'Javid Waldron',
-        title: '3D Environment &amp; Character Artist',
+        title: '3D Environment & Character Artist',
         social: [{
           name: 'artstation',
           url: 'https://artstation.com/javidwaldron'
@@ -41,4 +41,15 @@
   }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+  h1, h4 {
+    margin: 0;
+  }
+  .sidebar-social {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>

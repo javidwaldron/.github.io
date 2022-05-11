@@ -27,26 +27,46 @@ export default {
   .sidebar-nav {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
     padding: 0;
     margin: 0;
     list-style-type: none;
     
     li {
-      position: relative;
       display: inline-block;
+      width: 100%;
       max-width: 140px;
       
       a {
+        position: relative;
+        display: block;
         width: 100%;
         padding: 10px;
-        margin: 5px 0;
         font-size: 18px;
+        color: currentColor;
         text-transform: capitalize;
         text-decoration: none;
+        line-height: 1.3;
         border-radius: 8px;
+        overflow: hidden;
+        &:before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+        }
+        &:hover {
+          &:before {
+            background-color: var(--background-offset);
+            opacity: .2;
+          }
+        }
         &[aria-current] {
+          pointer-events: none;
           color: var(--accent);
-          background-color: var(--background-offset);
+          &:before {
+            background-color: var(--background-offset);
+          }
         }
       }
     }
