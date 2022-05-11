@@ -36,12 +36,14 @@
         width: 100%;
         padding: 10px;
         font-size: 18px;
+        font-weight: 700;
         color: currentColor;
         text-transform: capitalize;
         text-decoration: none;
         line-height: 1.3;
         border-radius: 8px;
         overflow: hidden;
+        
         &:before {
           content: '';
           position: absolute;

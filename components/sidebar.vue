@@ -4,7 +4,7 @@
     <h4>{{title}}</h4>
     <ul class="sidebar-social">
       <li v-for="item in social" :key="item.name">
-        <a :href="item.url">
+        <a :href="item.url" target="_blank">
           <icons :name="item.name" />
         </a>
       </li>
@@ -53,12 +53,11 @@
   }
   .sidebar {
     position: sticky;
-    top: 0;
+    top: 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 100px);
-    padding: 40px 10px;
     &-social {
       display: flex;
       gap: 20px;

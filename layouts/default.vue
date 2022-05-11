@@ -66,4 +66,8 @@
       height: 100%;
     }
   }
+  .container {
+    width: 100%;
+    padding: .5rem;
+  }
 </style>

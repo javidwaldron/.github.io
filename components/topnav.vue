@@ -19,15 +19,17 @@
 
 <style lang="scss" scoped>
   .topnav {
-    postion: relative;
+    position: relative;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    min-height: 100px;
+    padding: 1rem;
     width: 100%;
+    min-height: 100px;
     grid-column: 2;
-    font-size: 58px;
+    font-size: 42px;
     
     color: var(--background-offset);
   }

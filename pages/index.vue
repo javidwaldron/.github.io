@@ -1,7 +1,9 @@
 <template>
   <section class="container">
     <div class="work">
-      <div class="block"></div>
+      <div class="block">
+        <NuxtLink to="/work/job01">Go TO Job 01</NuxtLink>
+      </div>
       <div class="block"></div>
       <div class="block"></div>
       <div class="block"></div>
@@ -27,7 +29,6 @@ export default {
     grid-template-columns: 1fr;
     gap: 1rem;
     width: 100%;
-    padding: 40px 10px;
     .block {
       display: block;
       width: 100%;

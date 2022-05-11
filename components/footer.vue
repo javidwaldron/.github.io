@@ -5,6 +5,9 @@
   </footer>
 </template>
 <style lang="scss" scoped>
+  footer {
+    padding: 1rem 0;
+  }
   p {
     line-height: 1.5;
     margin: 0;

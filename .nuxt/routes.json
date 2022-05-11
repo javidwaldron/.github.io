@@ -14,6 +14,13 @@
     "_name": "_ef9a912c"
   },
   {
+    "name": "work-workitem",
+    "path": "/work/:workitem?",
+    "component": "/app/pages/work/_workitem.vue",
+    "chunkName": "pages/work/_workitem",
+    "_name": "_d283a522"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/app/pages/index.vue",

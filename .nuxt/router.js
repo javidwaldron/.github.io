@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _d8a8f054 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
 const _ef9a912c = () => interopDefault(import('../pages/reach out/index.vue' /* webpackChunkName: "pages/reach out/index" */))
+const _d283a522 = () => interopDefault(import('../pages/work/_workitem.vue' /* webpackChunkName: "pages/work/_workitem" */))
 const _2dfb1658 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -27,6 +28,10 @@ export const routerOptions = {
     path: "/reach%20out",
     component: _ef9a912c,
     name: "reach out"
+  }, {
+    path: "/work/:workitem?",
+    component: _d283a522,
+    name: "work-workitem"
   }, {
     path: "/",
     component: _2dfb1658,
