@@ -2,13 +2,13 @@
   <dialog class="generic-modal" v-if="modalopen">
     <form method="dialog">
       <div class="generic-modal--header">
-        <h3>Resume</h3>
-        <button class="btn btn-default-borderless btn-square btn-rounded" @click="close()">&times;</button>
+        <h3>Résume</h3>
+        <icons @click="close()" name="close" />
       </div>
       <div class="generic-modal--body">
         <p>The contents of this CV contain sensitive information, so the contents are stowed under lock &amp; key. If I’ve given you the password to access this, enter it below.</p>
         <label>
-          <input type="password" placeholder="put text in me daddy" v-model="pw.content" required >
+          <input type="password" placeholder="Résume Password" v-model="pw.content" required @keyup.enter.stop="submit()">
           <icons name="arrow-right" />
         </label>
       </div>
@@ -88,14 +88,13 @@
     form {
       position: relative;
       display: grid;
-  /*     grid-auto-rows: auto 1fr auto; */
       grid-auto-rows: 1fr auto 1fr;
       width: 100%;
       max-width: 600px;
       border: 1px solid #eee;
       border-radius: 8px;
       background-color: var(--background);
-      box-shadow: 0 6px 12px -3px rgba(0,0,0,0.2);
+      // box-shadow: 0 6px 12px -3px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
@@ -117,9 +116,10 @@
         margin: 0;
         padding: 0 !important;
       }
-      button {
-        font-size: 1.5rem;
-      }
+      .generic-icon {
+          font-size: 1.3rem;
+          aspect-ratio: 1/1;
+        }
     }
     &--body {
       position: relative;
@@ -138,6 +138,11 @@
           align-items: center;
           justify-content: center;
           aspect-ratio: 1/1;
+        }
+        input:invalid {
+          + .generic-icon {
+            color: red;
+          }
         }
       }
     }
