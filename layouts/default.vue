@@ -22,11 +22,27 @@
         { 
          rel: 'icon', 
          type: 'image/x-icon', 
-         href: 'https://cdn.gomix.com/2d2e28d2-e17b-4934-a643-b1c5ba787a0b%2Ffavicon.ico' 
+         href: 'https://cdn.glitch.global/c2f99bc4-f921-4cee-90b5-df019f304eee/favicon.png?v=1652244090700' 
         }
       ]
     },
-    mounted() {},
+    data() {
+      return {
+        darkModeEnabled: false
+      }
+    },
+    mounted() {
+      this.darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      this.checkDeviceTheme(prefersDark);
+      prefersDark.addListener((e) => this.checkDeviceTheme(e));
+    },
+    methods: {
+      checkDeviceTheme(e) {
+        // document.querySelectorAll('[name="theme-color"]')[0].content = window.getComputedStyle(document.documentElement).backgroundColor;
+        this.darkModeEnabled = e.matches;
+      },
+    },
     components: {
       sidebar
     }

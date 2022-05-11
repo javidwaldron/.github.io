@@ -6,7 +6,7 @@
       <li v-for="item in social" :key="item.name">
         <a :href="item.url">
           {{item.name}}
-          <glyph :name="item.name" />
+          <icons :name="item.name" />
         </a>
       </li>
     </ul>
@@ -18,7 +18,7 @@
 <script>
   import navigation from './nav.vue';
   import smallfooter from './footer.vue';
-  import glyph from './iconsys.vue';
+  import icons from './iconsys.vue';
   
   export default {
     data () {
@@ -43,7 +43,7 @@
     components: {
       navigation,
       smallfooter,
-      glyph
+      icons
     }
   }
 </script>
