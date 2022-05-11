@@ -1,8 +1,8 @@
 <template>
-  <section class="container">
-    <nuxt-link to="/" class="btn">⬅️ back</nuxt-link>
+  <section class="container work-container">
+    <nuxt-link to="/" class="btn back-btn">⬅️ back</nuxt-link>
     <h1>{{ post.title }}</h1>
-    <div v-html="post.html"/>
+    <div class="post-body" v-html="post.html"/>
   </section>
 </template>
 
@@ -44,8 +44,8 @@
   }
 </script>
 
-<style lang="scss" scoped>
-  .container {
+<style lang="scss">
+  .work-container {
     position: relative;
     &:before {
       content: '';
@@ -55,6 +55,21 @@
       bottom: 0;
       width: 25%;
       background-image: linear-gradient(to right, transparent, var(--background));
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      right: 100%;
+      width: 150px;
+      justify-content: flex-end;
+      
+      background: none;
+    }
+    
+    .post-body {
+      iframe {
+        width: 100%;
+      }
     }
   }
 </style>
