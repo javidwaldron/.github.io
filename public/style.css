@@ -58,6 +58,11 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
+@media screen and (max-width: 786px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 
 p {margin-bottom: 1rem;}
 

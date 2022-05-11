@@ -35,6 +35,10 @@
     height: 100%;
     align-items: center;
     flex-grow: 1;
+    @media screen and (max-width: 786px) {
+      height: auto;
+      flex-grow:0;
+    }
   }
   .sidebar-nav {
     display: grid;
@@ -45,8 +49,11 @@
     margin: 0;
     list-style-type: none;
     @media screen and (max-width: 786px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(4, 140px);
+      grid-template-rows: 1fr;
       overflow-x: auto;
+      white-space: nowrap;
+      width: unset;
     }
     
     li {

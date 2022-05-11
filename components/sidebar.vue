@@ -60,6 +60,11 @@
     width: 100%;
     height: calc(100vh - 100px);
     transition: 335ms ease-in-out all;
+    @media screen and (max-width: 786px) {
+      position: relative;
+      top: 0;
+      height: auto;
+    }
     &:before {
       content: '';
       position: absolute;

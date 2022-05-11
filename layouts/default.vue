@@ -61,8 +61,9 @@
     grid-template-columns: 1fr minmax(786px, 1144px) 1fr;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     @media screen and (max-width: 786px) {
-      grid-template-columns: repeeat(3,1fr);
+      grid-template-columns: 20px minmax(100px, 1fr) 20px;
     }
     
     &-cont {
@@ -72,7 +73,7 @@
       width: 100%;
       height: 100%;
       @media screen and (max-width: 786px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
       }
       > .container {
         position: relative;
