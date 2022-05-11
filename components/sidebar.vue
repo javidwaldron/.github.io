@@ -4,13 +4,16 @@
     <h4>{{title}}</h4>
     <navigation />
     <ul>
-      <li v-for></li>
+      <li v-for="item in social" :key="item.name"><a :href="item.url">{{item.name}}</a></li>
     </ul>
+    <smallfooter />
   </div>
 </template>
 
 <script>
   import navigation from '../components/nav.vue';
+  import smallfooter from '../components/footer.vue';
+  
   export default {
     data () {
       return {
@@ -32,7 +35,8 @@
       }
     },
     components: {
-      navigation
+      navigation,
+      smallfooter
     }
   }
 </script>
