@@ -3,7 +3,7 @@
     <h1>{{ post.title }}</h1>
     <div class="post-body" v-html="post.html"/>
     <ul class="tags-list">
-      <li class="tags-list--tag" v-for="tag in post.tags">
+      <li class="tags-list--tag btn btn-slim btn-secondary" v-for="tag in post.tags">
         <nuxt-link :to="'/tag/' + tag.slug">
           {{tag.name}}
         </nuxt-link>
@@ -67,7 +67,18 @@
       }
     }
     .tags-list {
-      &--tag {}
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin: 0;
+      padding: 0;
+      &--tag {
+        a {
+          text-decoration: none;
+        }
+      }
     }
   }
 </style>
