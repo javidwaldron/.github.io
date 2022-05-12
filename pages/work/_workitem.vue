@@ -2,6 +2,9 @@
   <section class="container work-container">
     <h1>{{ post.title }}</h1>
     <div class="post-body" v-html="post.html"/>
+    <ul>
+      <li v-for="tag in post.tags">{{tag.name}}</li>
+    </ul>
   </section>
 </template>
 
@@ -11,7 +14,6 @@
   export default {
     async asyncData ({ params }) {
       const post = await getSinglePost(params.workitem);
-      console.log(post)
       return { 
         post: post 
       }
