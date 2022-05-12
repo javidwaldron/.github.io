@@ -30,7 +30,6 @@
           } else {
             console.log("array is not empty!")
             for(let tag of tags) {
-              console.log("tag = ", tag, search, tag.slug == search)
               if(tag.slug == search) {
                 return true;
               }

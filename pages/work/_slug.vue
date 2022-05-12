@@ -2,8 +2,8 @@
   <section class="container work-container">
     <h1>{{ post.title }}</h1>
     <div class="post-body" v-html="post.html"/>
-    <ul>
-      <li v-for="tag in post.tags">
+    <ul class="tags-list">
+      <li class="tags-list--tag" v-for="tag in post.tags">
         <nuxt-link :to="'/tag/' + tag.slug">
           {{tag.name}}
         </nuxt-link>
@@ -65,6 +65,9 @@
         border-radius: 8px;
         margin: auto;
       }
+    }
+    .tags-list {
+      &--tag {}
     }
   }
 </style>
