@@ -30,14 +30,14 @@
           } else {
             console.log("array is not empty!")
             for(let tag of tags) {
-              console.log("tag = ", tag, !tags.includes(search))
-              if(!tags.includes(search)) {
+              console.log("tag = ", tag, search, tags.filter((t) => {t.name}))
+              if(tags.includes(search)) {
                 return true;
               }
               return false;
             }
             console.log("all non-tags should be gone ",work, tags, search)
-            return work;
+            return true;
           }
         });
       return { 
