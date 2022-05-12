@@ -21,17 +21,21 @@
       const posts = await getPosts();
       const search = params.slug;
       const filteredPosts = await posts.filter((work)=> {
-          console.log(posts)
           let tags = work.tags;
           
-          if (tags) {}
-          for(let tag of tags) {
-            if(!tags.includes(search)) {
-              return false;
+          if (Array.isArray(tags) && !tags.length) {
+            // empty
+            console.log("array is empty?", work, tags, search)
+            return false;
+          } else {
+            for(let tag of tags) {
+              if(!tags.includes(search)) {
+                return false;
+              }
             }
+            console.log(work, tags, search)
+            return true;
           }
-          console.log(work, tags, search)
-          return true;
         });
       return { 
         posts: filteredPosts 
