@@ -2,7 +2,7 @@
   <section class="container work-container">
     <h2>Work tagged as <span style="color: var(--accent);">{{ tag }}</span></h2>
     <ul>
-      <li v-for="(work, idx) in filteredWork">
+      <li v-for="(work, idx) in posts">
         <nuxt-link :style="'background-image: url(' + work.feature_image + ')'"
                    :key="work.name+idx"
                    :to="'../work/' + work.slug">
@@ -17,10 +17,22 @@
   import { getPosts } from '../../api/posts';
   
   export default {
-    async asyncData () {
+    async asyncData ({params}) {
       const posts = await getPosts();
+      const search = params.slug;
+      const filteredPosts = await posts.filter((work)=> {
+          let tags = work.tags;
+          
+          for(let tag of tags) {
+            if(!tags.includes(search)) {
+              return false;
+            }
+          }
+          console.log(work)
+          return true;
+        });
       return { 
-        posts: posts 
+        posts: filteredPosts 
       }
     },
     head() {
