@@ -20,12 +20,13 @@
     async asyncData ({params}) {
       const posts = await getPosts();
       const search = params.slug;
-      const filteredPosts = await posts.filter((work)=> {
+      
+      const filteredPosts = await posts.filter((work) => {
           let tags = work.tags;
-          
-          if (Array.isArray(tags) && !tags.length) {
+          console.log("tags length = ",tags.length, tags)
+          if (Array.isArray(tags) && tags.length === 0) {
             // empty
-            console.log("array is empty?", work, tags, search)
+            console.log("array is empty?", work)
             return false;
           } else {
             for(let tag of tags) {
@@ -33,7 +34,7 @@
                 return false;
               }
             }
-            console.log(work, tags, search)
+            console.log("all non-tags should be gone ",work, tags, search)
             return true;
           }
         });
@@ -52,20 +53,6 @@
       }
     },
     computed: {
-      filteredWork() {
-        let search = this.tag;
-        return this.posts.filter((work)=> {
-          let tags = work.tags;
-          
-          for(let tag of tags) {
-            if(!tags.includes(search)) {
-              return false;
-            }
-          }
-          
-          return true;
-        });
-      }
     },
     mounted() {
       console.log(this.filteredWork)
