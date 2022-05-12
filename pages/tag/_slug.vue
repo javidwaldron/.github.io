@@ -21,6 +21,7 @@
       const posts = await getPosts();
       const search = params.slug;
       const filteredPosts = await posts.filter((work)=> {
+          console.log(posts)
           let tags = work.tags;
           
           for(let tag of tags) {
@@ -28,7 +29,7 @@
               return false;
             }
           }
-          console.log(work)
+          console.log(work, tags, search)
           return true;
         });
       return { 
