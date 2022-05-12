@@ -1,26 +1,25 @@
 <template>
   <section class="container work-container">
-    <h1>{{ post.title }}</h1>
-    <div class="post-body" v-html="post.html"/>
+    <h1>{{ tag }}</h1>
     <ul>
-      <li v-for="tag in post.tags">{{tag.name}}</li>
+      <li v-for="item in post.tags">{{tag.name}}</li>
     </ul>
   </section>
 </template>
 
 <script>
-  import { getSinglePost } from '../../api/posts';
+  import { getPosts } from '../../api/posts';
   
   export default {
-    async asyncData ({ params }) {
-      const post = await getSinglePost(params.workitem);
+    async asyncData () {
+      const posts = await getPosts();
       return { 
-        post: post 
+        posts: posts 
       }
     },
     head() {
       return {
-        title: `JW | Work | ${this.post.title}`,
+        title: `JW | Tagged | ${this.searchedTag}`,
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
@@ -33,15 +32,27 @@
     },
     data () {
       return {
-        title: this.$route.params.workitem,
-        hid: 'description',
-        name: 'description',
-        content: 'My custom description'
+        tag: this.$route.params.slug
       }
     },
-    mounted() {
-      console.log(this.post)
-    }
+    computed: {
+      filteredWork() {
+        let search = this.tag;
+        return this.posts.filter((work)=> {
+          let tags = work.tags;
+          
+          for(let tag of tags) {
+            if(!tags.includes(search)) {
+              return false;
+            }
+          }
+          
+          return true;
+        });
+      },
+      sortedTags() {}
+    },
+    mounted() {}
   }
 </script>
 

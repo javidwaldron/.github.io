@@ -7,7 +7,8 @@ import scrollBehavior from './router.scrollBehavior.js'
 const _d8a8f054 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
 const _1d238929 = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
 const _09fb9d20 = () => interopDefault(import('../pages/cv/index.vue' /* webpackChunkName: "pages/cv/index" */))
-const _d283a522 = () => interopDefault(import('../pages/work/_workitem.vue' /* webpackChunkName: "pages/work/_workitem" */))
+const _7a5b19db = () => interopDefault(import('../pages/tag/_slug.vue' /* webpackChunkName: "pages/tag/_slug" */))
+const _6ee07c76 = () => interopDefault(import('../pages/work/_slug.vue' /* webpackChunkName: "pages/work/_slug" */))
 const _2dfb1658 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -34,9 +35,13 @@ export const routerOptions = {
     component: _09fb9d20,
     name: "cv"
   }, {
-    path: "/work/:workitem?",
-    component: _d283a522,
-    name: "work-workitem"
+    path: "/tag/:slug?",
+    component: _7a5b19db,
+    name: "tag-slug"
+  }, {
+    path: "/work/:slug?",
+    component: _6ee07c76,
+    name: "work-slug"
   }, {
     path: "/",
     component: _2dfb1658,

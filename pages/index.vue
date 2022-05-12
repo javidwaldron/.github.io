@@ -22,15 +22,12 @@
   export default {
     async asyncData () {
       const posts = await getPosts();
-      console.log(posts)
       return { 
         posts: posts 
       }
     },
     data () {
-      return {
-        posts : null
-      }
+      return {}
     },
     components: {
       icons

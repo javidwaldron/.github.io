@@ -21,11 +21,18 @@
     "_name": "_09fb9d20"
   },
   {
-    "name": "work-workitem",
-    "path": "/work/:workitem?",
-    "component": "/app/pages/work/_workitem.vue",
-    "chunkName": "pages/work/_workitem",
-    "_name": "_d283a522"
+    "name": "tag-slug",
+    "path": "/tag/:slug?",
+    "component": "/app/pages/tag/_slug.vue",
+    "chunkName": "pages/tag/_slug",
+    "_name": "_7a5b19db"
+  },
+  {
+    "name": "work-slug",
+    "path": "/work/:slug?",
+    "component": "/app/pages/work/_slug.vue",
+    "chunkName": "pages/work/_slug",
+    "_name": "_6ee07c76"
   },
   {
     "name": "index",
