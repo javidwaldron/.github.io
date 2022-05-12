@@ -1,8 +1,14 @@
 <template>
   <section class="container work-container">
-    <h1>{{ tag }}</h1>
+    <h2>Work tagged as <span style="color: var(--accent);">{{ tag }}</span></h2>
     <ul>
-      <li v-for="item in post.tags">{{tag.name}}</li>
+      <li v-for="(work, idx) in filteredWork">
+        <nuxt-link :style="'background-image: url(' + work.feature_image + ')'"
+                   :key="work.name+idx"
+                   :to="'../work/' + work.slug">
+                   <span>{{work.title}}</span>
+        </nuxt-link>
+      </li>
     </ul>
   </section>
 </template>
@@ -19,15 +25,7 @@
     },
     head() {
       return {
-        title: `JW | Tagged | ${this.searchedTag}`,
-        meta: [
-          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-          {
-            hid: this.post.id,
-            name: this.post.meta_title,
-            content: this.post.meta_description
-          }
-        ]
+        title: `JW | Tagged | ${this.tag}`
       }
     },
     data () {
@@ -49,10 +47,11 @@
           
           return true;
         });
-      },
-      sortedTags() {}
+      }
     },
-    mounted() {}
+    mounted() {
+      console.log(this.filteredWork)
+    }
   }
 </script>
 

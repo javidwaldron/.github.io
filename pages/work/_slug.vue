@@ -3,7 +3,11 @@
     <h1>{{ post.title }}</h1>
     <div class="post-body" v-html="post.html"/>
     <ul>
-      <li v-for="tag in post.tags">{{tag.name}}</li>
+      <li v-for="tag in post.tags">
+        <nuxt-link :to="'/tag/' + tag.slug">
+          {{tag.name}}
+        </nuxt-link>
+      </li>
     </ul>
   </section>
 </template>
