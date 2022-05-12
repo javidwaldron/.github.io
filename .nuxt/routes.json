@@ -3,35 +3,30 @@
     "name": "about",
     "path": "/about",
     "component": "/app/pages/about/index.vue",
-    "chunkName": "pages/about/index",
-    "_name": "_d8a8f054"
+    "chunkName": "pages/about/index"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "/app/pages/contact/index.vue",
-    "chunkName": "pages/contact/index",
-    "_name": "_1d238929"
+    "chunkName": "pages/contact/index"
   },
   {
     "name": "cv",
     "path": "/cv",
     "component": "/app/pages/cv/index.vue",
-    "chunkName": "pages/cv/index",
-    "_name": "_09fb9d20"
+    "chunkName": "pages/cv/index"
   },
   {
     "name": "work-workitem",
     "path": "/work/:workitem?",
     "component": "/app/pages/work/_workitem.vue",
-    "chunkName": "pages/work/_workitem",
-    "_name": "_d283a522"
+    "chunkName": "pages/work/_workitem"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/app/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_2dfb1658"
+    "chunkName": "pages/index"
   }
 ]
