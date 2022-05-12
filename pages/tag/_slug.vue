@@ -26,16 +26,15 @@
         
           if (tags.length === 0) {
             // empty
-            console.log("array is empty?")
             return false;
           } else {
             console.log("array is not empty!")
             for(let tag of tags) {
-              console.log("tag = ", tag)
+              console.log("tag = ", tag, !tags.includes(search))
               if(!tags.includes(search)) {
-                return false;
+                return true;
               }
-              return work;
+              return false;
             }
             console.log("all non-tags should be gone ",work, tags, search)
             return work;
