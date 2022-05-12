@@ -24,6 +24,7 @@
           console.log(posts)
           let tags = work.tags;
           
+          if (tags) {}
           for(let tag of tags) {
             if(!tags.includes(search)) {
               return false;
