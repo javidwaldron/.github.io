@@ -23,19 +23,22 @@
       
       const filteredPosts = await posts.filter((work) => {
           let tags = work.tags;
-          console.log("tags length = ",tags.length, tags)
-          if (Array.isArray(tags) && tags.length === 0) {
+        
+          if (tags.length === 0) {
             // empty
-            console.log("array is empty?", work)
+            console.log("array is empty?")
             return false;
           } else {
+            console.log("array is not empty!")
             for(let tag of tags) {
+              console.log("tag = ", tag)
               if(!tags.includes(search)) {
                 return false;
               }
+              return work;
             }
             console.log("all non-tags should be gone ",work, tags, search)
-            return true;
+            return work;
           }
         });
       return { 
