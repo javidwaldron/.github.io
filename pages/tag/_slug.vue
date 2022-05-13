@@ -1,25 +1,27 @@
 <template>
   <section class="container tag-container">
     <h2>Work tagged as <span style="color: var(--accent);">{{ tag }}</span></h2>
-    <ul class="block">
-      <li v-for="(work, idx) in posts">
-        <nuxt-link :style="'background-image: url(' + work.feature_image + ')'"
+    <ul class="block-cont" v-if="posts.length > 0">
+      <li v-for="(work, idx) in posts" class="block" :style="'background-image: url(' + work.feature_image + ')'">
+        <nuxt-link class="block-anchor" 
                    :key="work.name+idx"
                    :to="'../work/' + work.slug">
           <div class="block-meta">
             <div class="block-meta-title">
-              <h6>{{ '0' + (idx + 1)}}</h6><h5>{{work.title}}</h5>
+              <h5>{{work.title}}</h5>
             </div>
             <icons name="arrow-right" />
           </div>
         </nuxt-link>
       </li>
     </ul>
+    <p v-else>There don't seem to be any posts tagged as {{tag}}</p>
   </section>
 </template>
 
 <script>
   import { getPosts } from '../../api/posts';
+  import icons from '../../components/iconsys.vue';
   
   export default {
     async asyncData ({params}) {
@@ -56,10 +58,11 @@
         tag: this.$route.params.slug
       }
     },
-    computed: {
-    },
     mounted() {
       console.log(this.filteredWork)
+    },
+    components: {
+      icons
     }
   }
 </script>
@@ -150,6 +153,13 @@
             position: relative;
           }
         }
+      }
+      &-cont {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 0;
+        padding: 0;
       }
     }
   }
