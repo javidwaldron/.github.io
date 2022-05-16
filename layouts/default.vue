@@ -77,6 +77,7 @@
       }
       > .container {
         position: relative;
+        padding-bottom: 50px;
         z-index: 2;
       }
     }
