@@ -6,11 +6,11 @@
       <input @input="validator('name')" name="subject" type="text" placeholder="Name" v-model="recipientName.val" required :class="{ hasError: recipientName.error}" />
       <input @input="validator('email')" name="" type="text" placeholder="Email" v-model="recipientEmail.val" required :class="{ hasError: recipientEmail.error}" />
       <textarea @input="validator('message')" name="body" placeholder="Whats up" rows="6" v-model="recipientMessage.val" required :class="{ hasError: recipientMessage.error}"></textarea>
-      <p class="error-message">Please enter valid:
+      <p v-if="recipientName.error || recipientEmail.error || recipientMessage.error" class="error-message">
         <ul>
-          <li v-if="recipientName.error">{{ recipientName.val }}</li>
-          <li v-if="recipientEmail.error">{{  recipientEmail.val }}</li>
-          <li v-if="recipientMessage.error">{{ recipientMessage.val }}</li>
+          <li v-if="recipientName.error">{{ recipientName.val.length > 1 ? recipientName.val + ' is not a valid name' : 'Please Enter a Name' }}</li>
+          <li v-if="recipientEmail.error">{{  recipientEmail.val.length > 1 ? recipientEmail.val + ' is not a valid email' : 'Please Enter an Email address'}}</li>
+          <li v-if="recipientMessage.error">{{ recipientMessage.val.length > 1 ? 'Message is too short. Something longer than 10 characters.' : 'Please Enter a message' }}</li>
         </ul>
       </p>
       <button type="submit" value="send" class="btn btn-primary">Send <icons name="arrow-right" /></button>
@@ -102,6 +102,36 @@
       }
       .hasError {
         box-shadow: 0 0 0 3px red;
+      }
+      .error-message {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+        &:before {
+          content:'errors: ';
+          font-size: 10px;
+          padding: 3px 5px;
+          font-weight: 700;
+          color: red;
+        }
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          gap: 5px;
+          padding: 0;
+          margin: 0;
+          li {
+            font-size: 10px;
+            background-color: red;
+            color: white;
+            font-weight: 700;
+            padding: 3px 5px;
+            border-radius: 5px;
+          }
+        }
       }
     }
   }
