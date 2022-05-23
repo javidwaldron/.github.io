@@ -6,6 +6,13 @@
       <input @input="validator('name')" name="subject" type="text" placeholder="Name" v-model="recipientName.val" required :class="{ hasError: recipientName.error}" />
       <input @input="validator('email')" name="" type="text" placeholder="Email" v-model="recipientEmail.val" required :class="{ hasError: recipientEmail.error}" />
       <textarea @input="validator('message')" name="body" placeholder="Whats up" rows="6" v-model="recipientMessage.val" required :class="{ hasError: recipientMessage.error}"></textarea>
+      <p class="error-message">Please enter valid:
+        <ul>
+          <li v-if="recipientName.error">{{ recipientName.val }}</li>
+          <li v-if="recipientEmail.error">{{  recipientEmail.val }}</li>
+          <li v-if="recipientMessage.error">{{ recipientMessage.val }}</li>
+        </ul>
+      </p>
       <button type="submit" value="send" class="btn btn-primary">Send <icons name="arrow-right" /></button>
     </form>
   </section>
@@ -41,6 +48,8 @@
         let isNameValid = this.recipientName.val.length > 2;
         let isMessageValid = this.recipientMessage.val.length > 10;
         
+        this.validateAll();
+        
         if (isEmailValid && isNameValid && isMessageValid) {
           const reachingOut = {
             id: Math.floor(Math.random() * 100000),
@@ -55,19 +64,24 @@
           this.formSubmitted = true
         }
       },
+      validateAll() {
+        this.validator('name')
+        this.validator('email')
+        this.validator('message')
+      },
       validator(source) {
         let isEmailValid = this.recipientEmail.val.length > 0 && this.recipientEmail.val.indexOf('@') > 0 && this.recipientEmail.val.indexOf('@') < this.recipientEmail.val.indexOf('.');
         let isNameValid = this.recipientName.val.length > 2;
         let isMessageValid = this.recipientMessage.val.length > 10;
         switch(source) {
           case 'name':
-            isNameValid ? this.recipientName.error = true : this.recipientName.error = false
+            isNameValid ? this.recipientName.error = false : this.recipientName.error = true;
             break;
           case 'email':
-            isEmailValid ? this.recipientEmail.error = true : this.recipientEmail.error = false
+            isEmailValid ? this.recipientEmail.error = false : this.recipientEmail.error = true;
             break;
           case 'message':
-            isMessageValid ? this.recipientMessage.error = true : this.recipientMessage.error = false
+            isMessageValid ? this.recipientMessage.error = false : this.recipientMessage.error = true;
             break
           default:
             break;
