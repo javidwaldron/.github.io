@@ -1,9 +1,7 @@
 <template>
   <section class="container">
     <div class="work">
-      <p>
-        
-  </p>
+      <p v-if="!postsFetched">Loading Posts...</p>
       <div class="block" v-for="(post, idx) in posts" :style="'background-image: url(' + post.feature_image + ');'">
         <nuxt-link class="block-anchor" :to="'/work/' + post.slug">
           <div class="block-meta">
