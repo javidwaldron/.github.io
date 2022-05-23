@@ -3,9 +3,9 @@
     <h2>Let’s Work Together</h2>
     <p v-if="!formSubmitted">Looks like you saw something you liked 😏 Let’s chat! Feel free to utilize the form below, though if you prefefer email instead, you can to so through <a href="mailto:javidwaldron@gmail.com">javidwaldron@gmail.com</a></p>
     <form action="mailto:javidwaldron@gmail.com" method="GET" enctype="text/plain" @submit.prevent="submit()" v-if="!formSubmitted">
-      <input name="subject" type="text" placeholder="Name" v-model="recipientName.val" required />
-      <input name="" type="text" placeholder="Email" v-model="recipientEmail.val" required />
-      <textarea name="body" placeholder="Whats up" rows="6" v-model="recipientMessage.val" required></textarea>
+      <input @input="validator('name')" name="subject" type="text" placeholder="Name" v-model="recipientName.val" required :class="{ hasError: recipientName.error}" />
+      <input @input="validator('email')" name="" type="text" placeholder="Email" v-model="recipientEmail.val" required :class="{ hasError: recipientEmail.error}" />
+      <textarea @input="validator('message')" name="body" placeholder="Whats up" rows="6" v-model="recipientMessage.val" required :class="{ hasError: recipientMessage.error}"></textarea>
       <button type="submit" value="send" class="btn btn-primary">Send <icons name="arrow-right" /></button>
     </form>
   </section>
@@ -61,7 +61,7 @@
         let isMessageValid = this.recipientMessage.val.length > 10;
         switch(source) {
           case 'name':
-            isEmailValid ? this.recipientName.error = true : this.recipientName.error = false
+            isNameValid ? this.recipientName.error = true : this.recipientName.error = false
             break;
           case 'email':
             isEmailValid ? this.recipientEmail.error = true : this.recipientEmail.error = false
@@ -85,6 +85,9 @@
     form {
       .btn {
         justify-content: space-between;
+      }
+      .hasError {
+        box-shadow: 0 0 0 3px red;
       }
     }
   }
