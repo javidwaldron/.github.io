@@ -49,7 +49,7 @@
     created(){
       console.clear();
       if (process.browser){
-        this.isMobile = window, window.outerWidth < 786;
+        this.isMobile = window.outerWidth < 786;
       }
     },
     methods: {
@@ -102,6 +102,9 @@
           grid-column: 1 / -1;
           grid-row: 1 / -1;
           transition: 335ms ease-in-out all;
+          @media screen and (max-width: 786px) {
+            margin-top: 50px;
+          }
         }
       }
     }

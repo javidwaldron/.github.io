@@ -37,12 +37,8 @@
         },{
           name: 'linkedin',
           url: 'https://linkedin.com/in/javidwaldron'
-        }],
-        isMobile: false
+        }]
       }
-    },
-    mounted(){
-      console.log(this.$parent.isMobile)
     },
     components: {
       navigation,
@@ -116,6 +112,7 @@
       visibility: hidden;
       transform: translateX(100%);
       z-index:3;
+      
     }
   }
 </style>
@@ -132,6 +129,9 @@
       }
       .back-btn {
         transform: translateX(0);
+        @media screen and (max-width: 786px) {
+          transform: translateX(100%);
+        }
         ~ * {
           opacity: .2;
         }
