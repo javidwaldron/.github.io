@@ -41,7 +41,6 @@
       flex-grow:0;
       margin-left: -20px;
       align-self: flex-start;
-      padding: 0 20px;
     }
   }
   .sidebar-nav {
@@ -53,12 +52,19 @@
     margin: 0;
     list-style-type: none;
     @media screen and (max-width: 786px) {
-      grid-template-columns: repeat(4, 140px);
+      grid-template-columns: 20px repeat(4, 140px) 20px;
       grid-template-rows: 1fr;
       overflow-x: auto;
       white-space: nowrap;
+      scrollbar-gutter: stable;
+      padding-bottom: 15px;
       width: unset;
       
+      &:before,
+      &:after {
+        content: '';
+        display: inline-block;
+      }
     }
     
     li {

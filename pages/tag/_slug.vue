@@ -70,8 +70,10 @@
 <style lang="scss">
   .tag-container {
     position: relative;
-    > h1 {
-      text-align: center;
+    @media screen and (max-width: 786px) {
+      > h2 {
+        text-align: center;
+      }
     }
     .block {
       position: relative;
