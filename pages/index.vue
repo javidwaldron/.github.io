@@ -48,6 +48,9 @@
     gap: 1rem;
     width: 100%;
     transition: 335ms ease-in-out all;
+    @media screen and (max-width: 786px) {
+      margin-top: 2rem;
+    }
     .block {
       position: relative;
       display: flex;

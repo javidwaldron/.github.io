@@ -36,8 +36,12 @@
     align-items: center;
     flex-grow: 1;
     @media screen and (max-width: 786px) {
+      width: calc(100% + 40px);
       height: auto;
       flex-grow:0;
+      margin-left: -20px;
+      align-self: flex-start;
+      padding: 0 20px;
     }
   }
   .sidebar-nav {
@@ -54,6 +58,7 @@
       overflow-x: auto;
       white-space: nowrap;
       width: unset;
+      
     }
     
     li {

@@ -32,5 +32,8 @@
     font-size: 42px;
     
     color: var(--background-offset);
+    @media screen and (max-width: 786px) {
+      grid-column: 1 / -1;
+    }
   }
 </style>

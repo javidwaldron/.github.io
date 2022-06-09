@@ -112,7 +112,9 @@
       visibility: hidden;
       transform: translateX(100%);
       z-index:3;
-      
+      @media screen and (max-width: 786px) {
+        width: auto;
+      }
     }
   }
 </style>

@@ -68,12 +68,12 @@
 <style lang="scss" scoped>
   .app {
     display: grid;
-    grid-template-columns: 1fr minmax(786px, 1144px) 1fr;
+    grid-template-columns: 1fr minmax(300px, 1144px) 1fr;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
     @media screen and (max-width: 786px) {
-      grid-template-columns: 20px minmax(100px, 1fr) 20px;
+      // grid-template-columns: 20px minmax(100px, 1fr) 20px;
     }
     
     &-cont {
@@ -84,6 +84,8 @@
       height: 100%;
       @media screen and (max-width: 786px) {
         grid-template-columns: 100%;
+        grid-column: 1 / -1;
+        padding: 0 20px;
       }
       > .container {
         position: relative;
