@@ -6,7 +6,7 @@
       <transition name="fade" mode="out-in">
         <nuxt/>
       </transition>
-      <smallfooter />
+      <smallfooter v-if="isMobile" />
     </div>
   </div>
 </template>
@@ -36,7 +36,8 @@
     },
     data() {
       return {
-        prefersDark: false
+        prefersDark: false,
+        isMobile: false
       }
     },
     mounted() {
@@ -44,6 +45,12 @@
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       this.checkDeviceTheme(prefersDark);
       prefersDark.addListener((e) => this.checkDeviceTheme(e));
+    },
+    created(){
+      console.clear();
+      if (process.browser){
+        this.isMobile = window, window.outerWidth < 786;
+      }
     },
     methods: {
       checkDeviceTheme(e) {

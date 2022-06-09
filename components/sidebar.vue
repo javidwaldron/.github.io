@@ -11,7 +11,7 @@
       </li>
     </ul>
     <navigation />
-    <smallfooter v-if="!isMobile" />
+    <smallfooter v-if="!this.$parent.isMobile" />
   </div>
 </template>
 
@@ -21,11 +21,6 @@
   import icons from './iconsys.vue';
   
   export default {
-    async asyncData ({params}) {
-      return { 
-        isMobile: window.outerWidth < 786
-      }
-    },
     data () {
       return {
         name : 'Javid Waldron',
@@ -43,11 +38,11 @@
           name: 'linkedin',
           url: 'https://linkedin.com/in/javidwaldron'
         }],
-        mobile: window.outerWidth < 786
+        isMobile: false
       }
     },
-    mounted() {
-      
+    mounted(){
+      console.log(this.$parent.isMobile)
     },
     components: {
       navigation,
