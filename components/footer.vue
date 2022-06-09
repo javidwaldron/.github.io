@@ -8,6 +8,9 @@
   footer {
     padding: 1rem 0;
     font-size: 12px;
+    @media screen and (max-width: 786px) {
+      text-align: center;
+    }
   }
   p {
     line-height: 1.5;

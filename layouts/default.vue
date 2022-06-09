@@ -6,6 +6,7 @@
       <transition name="fade" mode="out-in">
         <nuxt/>
       </transition>
+      <smallfooter />
     </div>
   </div>
 </template>
@@ -13,6 +14,7 @@
 <script>
   import sidebar from '../components/sidebar.vue';
   import topnav from '../components/topnav.vue';
+  import smallfooter from '../components/footer.vue';
   
   export default {
     head() {
@@ -51,7 +53,8 @@
     },
     components: {
       sidebar,
-      topnav
+      topnav,
+      smallfooter
     }
   }
 </script>
