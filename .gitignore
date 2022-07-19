@@ -1,6 +1,8 @@
 .glitchdotcom.json
 .node-gyp
 .env
+.bash_history
+.glitch-assets
 node_modules
 components/assets
-report*.json
+.data
