@@ -27,7 +27,7 @@
       </form>
     </dialog>
     <div v-if="valid && !pw.error">
-      <embed src="./JW_CV.pdf" style="width: 100%; aspetc-ratio: 3/4;" />
+      <embed src="./JW_CV.pdf" style="width: 100%; aspect-ratio: 3/4;" />
     </div>
     <div v-else>
       <button v-if="previouslySubmitted" class="btn btn-secondary" @click="modalToggle()">Try Again</button>
