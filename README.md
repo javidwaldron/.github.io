@@ -1,4 +1,4 @@
 # Javid Waldron | Portfolio site
 ## Front-End Skeleton
 
-This site is meant to serve as the
+A multi-disciplinary artist based in Boston

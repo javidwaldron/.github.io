@@ -1,7 +1,7 @@
 {
-  "name": "glitch-hello-node",
-  "version": "0.0.1",
-  "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
+  "name": "javidwaldron-portfolio",
+  "version": "1.0.0",
+  "description": "A multi-disciplinary artist based in Boston.",
   "main": "server.js",
   "scripts": {
     "dev": "nuxt",
@@ -21,12 +21,9 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-hello-node"
+    "url": "https://javidwaldron.works/"
   },
   "license": "MIT",
-  "glitch": {
-    "projectType": "generated_static"
-  },
   "keywords": [
     "node",
     "glitch",
