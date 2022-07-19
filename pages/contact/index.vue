@@ -8,9 +8,9 @@
       <p v-if="!formSubmitted">Looks like you saw something you liked 😏 Let’s chat! Feel free to utilize the form below, though if you prefefer email instead, you can to so through <a href="mailto:javidwaldron@gmail.com">javidwaldron@gmail.com</a></p>
     </transition>
     <form action="mailto:javidwaldron@gmail.com" method="GET" enctype="text/plain" @submit.prevent="submit()" v-if="!formSubmitted">
-      <input @input="validator('name')" name="subject" type="text" placeholder="Name" v-model="recipientName.val" required :class="{ hasError: recipientName.error}" />
-      <input @input="validator('email')" name="" type="text" placeholder="Email" v-model="recipientEmail.val" required :class="{ hasError: recipientEmail.error}" />
-      <textarea @input="validator('message')" name="body" placeholder="Whats up" rows="6" v-model="recipientMessage.val" required :class="{ hasError: recipientMessage.error}"></textarea>
+      <input @blur="validator('name')" name="subject" type="text" placeholder="Name" v-model="recipientName.val" required :class="{ hasError: recipientName.error}" />
+      <input @blur="validator('email')" name="" type="text" placeholder="Email" v-model="recipientEmail.val" required :class="{ hasError: recipientEmail.error}" />
+      <textarea @blur="validator('message')" name="body" placeholder="Whats up" rows="10" v-model="recipientMessage.val" required :class="{ hasError: recipientMessage.error}"></textarea>
       <p v-if="recipientName.error || recipientEmail.error || recipientMessage.error" class="error-message">
         <ul>
           <transition name="fade" mode="out-in">
