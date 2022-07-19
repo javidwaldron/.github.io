@@ -1,5 +1,5 @@
-- name: Deploy
-  uses: peaceiris/javidwaldron.github.io 
-  with:
-    github_token: ${{ secrets.GITHUB_TOKEN }}
-    publish_dir: ./dist
+name: Deploy
+uses: peaceiris/javidwaldron.github.io 
+with:
+  github_token: ${{ secrets.GITHUB_TOKEN }}
+  publish_dir: ./dist
