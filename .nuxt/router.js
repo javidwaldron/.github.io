@@ -4,12 +4,12 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _d8a8f054 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
-const _1d238929 = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
-const _09fb9d20 = () => interopDefault(import('../pages/cv/index.vue' /* webpackChunkName: "pages/cv/index" */))
-const _7a5b19db = () => interopDefault(import('../pages/tag/_slug.vue' /* webpackChunkName: "pages/tag/_slug" */))
-const _6ee07c76 = () => interopDefault(import('../pages/work/_slug.vue' /* webpackChunkName: "pages/work/_slug" */))
-const _2dfb1658 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _6b7bc597 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
+const _41db5aaa = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
+const _0ad5c202 = () => interopDefault(import('../pages/cv/index.vue' /* webpackChunkName: "pages/cv/index" */))
+const _c61c5848 = () => interopDefault(import('../pages/tag/_slug.vue' /* webpackChunkName: "pages/tag/_slug" */))
+const _c1bdfad6 = () => interopDefault(import('../pages/work/_slug.vue' /* webpackChunkName: "pages/work/_slug" */))
+const _818e0e4e = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -24,27 +24,27 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _d8a8f054,
+    component: _6b7bc597,
     name: "about"
   }, {
     path: "/contact",
-    component: _1d238929,
+    component: _41db5aaa,
     name: "contact"
   }, {
     path: "/cv",
-    component: _09fb9d20,
+    component: _0ad5c202,
     name: "cv"
   }, {
     path: "/tag/:slug?",
-    component: _7a5b19db,
+    component: _c61c5848,
     name: "tag-slug"
   }, {
     path: "/work/:slug?",
-    component: _6ee07c76,
+    component: _c1bdfad6,
     name: "work-slug"
   }, {
     path: "/",
-    component: _2dfb1658,
+    component: _818e0e4e,
     name: "index"
   }],
 

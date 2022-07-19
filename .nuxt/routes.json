@@ -2,43 +2,43 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/app/pages/about/index.vue",
+    "component": "/mnt/c/Users/Ltrad/Documents/GIT/Personal/javidwaldron.github.io/pages/about/index.vue",
     "chunkName": "pages/about/index",
-    "_name": "_d8a8f054"
+    "_name": "_6b7bc597"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "/app/pages/contact/index.vue",
+    "component": "/mnt/c/Users/Ltrad/Documents/GIT/Personal/javidwaldron.github.io/pages/contact/index.vue",
     "chunkName": "pages/contact/index",
-    "_name": "_1d238929"
+    "_name": "_41db5aaa"
   },
   {
     "name": "cv",
     "path": "/cv",
-    "component": "/app/pages/cv/index.vue",
+    "component": "/mnt/c/Users/Ltrad/Documents/GIT/Personal/javidwaldron.github.io/pages/cv/index.vue",
     "chunkName": "pages/cv/index",
-    "_name": "_09fb9d20"
+    "_name": "_0ad5c202"
   },
   {
     "name": "tag-slug",
     "path": "/tag/:slug?",
-    "component": "/app/pages/tag/_slug.vue",
+    "component": "/mnt/c/Users/Ltrad/Documents/GIT/Personal/javidwaldron.github.io/pages/tag/_slug.vue",
     "chunkName": "pages/tag/_slug",
-    "_name": "_7a5b19db"
+    "_name": "_c61c5848"
   },
   {
     "name": "work-slug",
     "path": "/work/:slug?",
-    "component": "/app/pages/work/_slug.vue",
+    "component": "/mnt/c/Users/Ltrad/Documents/GIT/Personal/javidwaldron.github.io/pages/work/_slug.vue",
     "chunkName": "pages/work/_slug",
-    "_name": "_6ee07c76"
+    "_name": "_c1bdfad6"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/app/pages/index.vue",
+    "component": "/mnt/c/Users/Ltrad/Documents/GIT/Personal/javidwaldron.github.io/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_2dfb1658"
+    "_name": "_818e0e4e"
   }
 ]
