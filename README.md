@@ -8,6 +8,6 @@ As a multi-disciplinary artist based in Boston, I’ve always been a student of 
 Though I’ve only been doing 3D art for the better half of the past year, I feel that I’ve come a long way on this journey. There is always room for improvement &amp; growth, so if you’re looking for a jack of all trades, don’t hesitate to reach out on social, or the link in the navigation.
 
 ---
-*Stack user: Nuxt, Vue, SCSS, built in Glitch before being deployed to github pages*
+*Stack uses: Nuxt, Vue, SCSS, built in Glitch before being deployed to github pages*
 
 [![made With ❤️ by Ltrademark](https://static.basedcdn.com/madebyLTM/src/assets/made-with-less3-by-ltrademark.png)](https://ltrdmrk.co)
