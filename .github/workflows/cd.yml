@@ -1,4 +1,4 @@
-name: cd
+name: Nuxt Deploy
 on: [push, pull_request]
 jobs:
   cd:
