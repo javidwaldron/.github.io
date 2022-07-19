@@ -10,4 +10,4 @@ Though I’ve only been doing 3D art for the better half of the past year, I fee
 ---
 *Stack user: Nuxt, Vue, SCSS, built in Glitch before being deployed to github pages*
 
-![made With ❤️ by Ltrademark](https://static.basedcdn.com/madebyLTM/src/assets/made-with-less3-by-ltrademark.png)
+[![made With ❤️ by Ltrademark](https://static.basedcdn.com/madebyLTM/src/assets/made-with-less3-by-ltrademark.png)](https://ltrdmrk.co)
