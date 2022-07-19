@@ -27,7 +27,7 @@
       </form>
     </dialog>
     <div v-if="valid && !pw.error">
-      Show stuff here if successful
+      <embed src="./JW_CV.pdf" style="width: 100%; aspetc-ratio: 3/4;" />
     </div>
     <div v-else>
       <button v-if="previouslySubmitted" class="btn btn-secondary" @click="modalToggle()">Try Again</button>
@@ -36,6 +36,7 @@
 </template>
 <script>
   import icons from '../../components/iconsys.vue';
+
   export default {
     head() {
       return {
@@ -53,8 +54,7 @@
         previouslySubmitted: false
       }
     },
-    mounted() {
-    },
+    mounted() {},
     methods: {
       modalToggle() {
         this.modalopen = !this.modalopen;
