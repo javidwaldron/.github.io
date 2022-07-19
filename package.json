@@ -11,13 +11,14 @@
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
-    "nuxt": "^2.15.8",
-    "sass": "^1.51.0",
-    "axios": "^0.27.2",
-    "sass-loader": "^10.1.1",
-    "nuxt-pdf": "1.0.4",
     "@nuxtjs/svg": "^0.4.0",
-    "@tryghost/content-api": "^1.9.5"
+    "@tryghost/content-api": "^1.9.5",
+    "axios": "^0.27.2",
+    "nuxt": "^2.15.8",
+    "nuxt-pdf": "1.0.4",
+    "push-dir": "^0.4.1",
+    "sass": "^1.51.0",
+    "sass-loader": "^10.1.1"
   },
   "engines": {
     "node": "12.x"
