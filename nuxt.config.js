@@ -30,6 +30,9 @@ export default {
   },
   ssr: false,
   target: 'static',
+  router: {
+    base: '/docs'
+  },
   generate: {
     dir: 'docs'
   }
