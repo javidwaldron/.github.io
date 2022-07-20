@@ -24,9 +24,6 @@ jobs:
       - name: Generate Build
         run: npm run generate
 
-      - name: Start
-        run: npm run start
-
       - name: Deploy to gh-pages Brance
         uses: peaceiris/actions-gh-pages@v3
         with:
