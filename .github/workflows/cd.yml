@@ -24,9 +24,6 @@ jobs:
       - name: Generate Build
         run: npm run generate
 
-      - name: Github Pages Deployment Pre-Requisite
-        run: npm run deploy
-
       - name: Deploy to gh-pages Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
