@@ -1,6 +1,6 @@
 export default {
   loading: {
-    color: 'blue',
+    color: '#27C9ED',
     height: '2px'
   },
   css: [
