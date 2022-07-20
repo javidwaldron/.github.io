@@ -30,6 +30,9 @@ export default {
   },
   ssr: false,
   target: 'static',
+  generate: {
+    fallback: "404.html"
+  },
   router: {
     base: '/'
   }
