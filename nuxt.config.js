@@ -28,5 +28,8 @@ export default {
       source: 'https://cdn.glitch.global/c2f99bc4-f921-4cee-90b5-df019f304eee/favicon.png?v=1652244090700'
     }
   },
-  target: 'static'
+  target: 'static',
+  router: {
+    base: '/'
+  }
 }
