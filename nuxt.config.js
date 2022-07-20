@@ -30,6 +30,6 @@ export default {
   },
   target: 'static',
   router: {
-    base: '/'
+    base: '/javidwaldron.github.io/'
   }
 }
