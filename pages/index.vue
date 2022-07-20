@@ -2,7 +2,7 @@
   <section class="container">
     <div class="work">
       <p v-if="!postsFetched">Loading Posts...</p>
-      <div class="block" v-for="(post, idx) in posts" :style="'background-image: url(' + post.feature_image + ');'">
+      <div class="block" v-for="(post, idx) in posts" :style="'background-image: url(' + post.feature_image + ');'" :key="post">
         <nuxt-link class="block-anchor" :to="'/work/' + post.slug">
           <div class="block-meta">
             <div class="block-meta-title">

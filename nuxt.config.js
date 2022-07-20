@@ -31,6 +31,6 @@ export default {
   ssr: false,
   target: 'static',
   router: {
-    base: '/javidwaldron.github.io/'
+    base: '/'
   }
 }
