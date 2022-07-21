@@ -30,13 +30,13 @@
           { hid: 'og-type', property: 'og:type', content: 'website' },
           { hid: 'og-title', property: 'og:title', content: 'Javid Waldron' },
           { hid: 'og-desc', property: 'og:description', content: 'Multi-disciplinary artist & graphic designer, based in Boston.' },
-          { hid: 'og-image', property: 'og:image', content: './share-card.jpg' },
+          { hid: 'og-image', property: 'og:image', content: 'https://cdn.glitch.global/c2f99bc4-f921-4cee-90b5-df019f304eee/summary_large_card%20-%20main%20alt.jpg?v=1658427680573' },
           { hid: 'og-image', property: 'og:image:width', content: '600' },
           { hid: 'og-image', property: 'og:image:height', content: '315' },
           { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
           { hid: 't-title', name: 'twitter:title', content: 'Javid Waldron' },
           { hid: 't-desc', name: 'twitter:description', content: 'Multi-disciplinary artist & graphic designer, based in Boston.' },
-          { hid: 't-image', property: 'twitter:image', content: './share-card.jpg' }
+          { hid: 't-image', property: 'twitter:image', content: 'https://cdn.glitch.global/c2f99bc4-f921-4cee-90b5-df019f304eee/summary_large_card%20-%20main%20alt.jpg?v=1658427680573' }
         ],
         link: [
           { 
