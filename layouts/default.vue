@@ -23,7 +23,20 @@
         meta: [
           { charset: 'utf-8' },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-          { hid: 'description', content: "Nuxt.js project" }
+          { name: 'theme', content: '#27C9ED' },
+          { hid: 'description', content: "Multi-disciplinary artist & graphic designer, based in Boston." },
+          { hid: 'keywords', content: 'graphic artist, 3d artist, graphic design, 3d modeling, javid, javid waldron, waldron, art' },
+          { hid: 'og-url', property: 'og:url', content: 'https://javidwaldron.works' },
+          { hid: 'og-type', property: 'og:type', content: 'website' },
+          { hid: 'og-title', property: 'og:title', content: 'Javid Waldron' },
+          { hid: 'og-desc', property: 'og:description', content: 'Multi-disciplinary artist & graphic designer, based in Boston.' },
+          { hid: 'og-image', property: 'og:image', content: './share-card.jpg' },
+          { hid: 'og-image', property: 'og:image:width', content: '600' },
+          { hid: 'og-image', property: 'og:image:height', content: '315' },
+          { hid: 't-type', name: 'twitter:card', content: 'summary_large_image' },
+          { hid: 't-title', name: 'twitter:title', content: 'Javid Waldron' },
+          { hid: 't-desc', name: 'twitter:description', content: 'Multi-disciplinary artist & graphic designer, based in Boston.' },
+          { hid: 't-image', property: 'twitter:image', content: './share-card.jpg' }
         ],
         link: [
           { 
