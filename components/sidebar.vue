@@ -24,7 +24,7 @@
     data () {
       return {
         name : 'Javid Waldron',
-        title: '3D Environment & Character Artist',
+        title: '3D Artistry & Graphic Designer',
         social: [{
           name: 'artstation',
           url: 'https://artstation.com/javidwaldron'
