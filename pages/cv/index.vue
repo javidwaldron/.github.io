@@ -64,7 +64,6 @@
     methods: {
       modalToggle() {
         this.modalopen = !this.modalopen;
-        this.previouslySubmitted = true;
       },
       submit() {
         this.validate();
