@@ -54,10 +54,9 @@
       }
     },
     mounted() {
-      this.prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-      this.checkDeviceTheme(prefersDark);
-      prefersDark.addListener((e) => this.checkDeviceTheme(e));
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        this.prefersDark = event.matches ? true : false;
+      });
     },
     created(){
       console.clear();
@@ -66,9 +65,9 @@
       }
     },
     methods: {
-      checkDeviceTheme(e) {
+      checkDeviceTheme() {
         // document.querySelectorAll('[name="theme-color"]')[0].content = window.getComputedStyle(document.documentElement).backgroundColor;
-        this.prefersDark = e.matches;
+        this.prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       },
     },
     components: {

@@ -108,6 +108,7 @@
 <style lang="scss">
   .contact-container {
     form {
+      color: currentColor;
       .btn {
         justify-content: space-between;
       }

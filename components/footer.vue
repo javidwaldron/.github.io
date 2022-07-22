@@ -2,6 +2,7 @@
   <footer>
     <p>Copyright &copy; 2022 Javid Waldron</p>
     <p>All Rights on works Reserved</p>
+    <p style="font-size: .85em;">Made with ❤️ by <a href="https://ltrdmrk.co" target="_blank" title="Ltrademark">L&trade;</a></p>
   </footer>
 </template>
 <style lang="scss" scoped>

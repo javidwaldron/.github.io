@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <dialog class="generic-modal" v-if="modalopen">
+    <dialog class="generic-modal" v-if="modalopen && !previouslySubmitted">
       <form method="dialog">
         <div class="generic-modal--header">
           <h4>Résume</h4>
@@ -20,13 +20,16 @@
             <icons name="arrow-right" />
           </label>
           <small style="color: red;" v-if="pw.error">Please Enter provided Password</small>
+          <label class="checkbx">
+            <input type="checkbox" v-model="rememberMe" /> Remember Me
+          </label>
         </div>
         <div class="generic-modal--footer">
           <button class="btn btn-primary btn-slim" @click="submit()">Submit</button>
         </div>
       </form>
     </dialog>
-    <div v-if="valid && !pw.error">
+    <div v-if="(valid && !pw.error) || previouslySubmitted">
       <embed src="./JW_CV.pdf" style="width: 100%; aspect-ratio: 3/4;" />
     </div>
     <div v-else>
@@ -51,10 +54,13 @@
           error: false
         },
         valid: false,
-        previouslySubmitted: false
+        previouslySubmitted: process.client ? localStorage.getItem('returningUser') ? true : false : false,
+        rememberMe: false
       }
     },
-    mounted() {},
+    mounted() {
+      console.log(process.client)
+    },
     methods: {
       modalToggle() {
         this.modalopen = !this.modalopen;
@@ -62,12 +68,11 @@
       },
       submit() {
         this.validate();
+        this.dontYouForgetAboutMe();
 
         if(this.valid) {
-          console.log("nice~ this works!")
           this.pw.content = '';
           this.modalToggle();
-          // redirect to pdf file
         } else {
           console.log("wrong pw, but also, nice~ this works!")
         }
@@ -89,6 +94,13 @@
           this.pw.error = false
           e.target.setCustomValidity("");
         }
+      },
+      dontYouForgetAboutMe() {
+        if(this.rememberMe) {
+          localStorage.setItem('returningUser', true)
+        } else {
+          return;
+        }
       }
     },
     components: {
@@ -104,6 +116,8 @@
     display: flex;
     border: none;
     padding: 0;
+    color: currentColor;
+    background: none;
     &:before {
       content: '';
       position: fixed;
@@ -154,6 +168,9 @@
     &--body {
       position: relative;
       padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       &.handle-overflow {
         max-height: 65vh;
         overflow-y: auto;
@@ -174,6 +191,9 @@
             color: red;
           }
         }
+      }
+      p {
+        margin: 0;
       }
     }
     &--footer {

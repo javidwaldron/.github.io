@@ -31,5 +31,11 @@ export default {
   },
   router: {
     base: '/'
+  },
+  watchers: {
+    webpack: {
+      aggregateTimeout: 300,
+      poll: 1000
+    }
   }
 }
