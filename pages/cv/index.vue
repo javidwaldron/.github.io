@@ -17,7 +17,7 @@
                    @keyup.enter.stop="submit()" 
                    @invalid="validationMessage($event, 'Please Enter provided Password')"
                    required>
-            <icons name="arrow-right" />
+            <icons @click="submit()" name="arrow-right" />
           </label>
           <small style="color: red;" v-if="pw.error">Please Enter provided Password</small>
           <label class="checkbx">
@@ -33,7 +33,9 @@
       <embed src="./JW_CV.pdf" style="width: 100%; aspect-ratio: 3/4;" />
     </div>
     <div v-else>
-      <button v-if="previouslySubmitted" class="btn btn-secondary" @click="modalToggle()">Try Again</button>
+      <h2>For Work Purposes</h2>
+      <p>Résume's are password protected, so if you like to request access, <nuxt-link  to="/contact">let me know</nuxt-link>.</p>
+      <button class="btn btn-secondary" @click="modalToggle()">View Resume <icons name="arrow-right" /></button>
     </div>
   </section>
 </template>
@@ -48,7 +50,7 @@
     },
     data () {
       return {
-        modalopen: true,
+        modalopen: false,
         pw: {
           content: '',
           error: false
@@ -67,7 +69,9 @@
       },
       submit() {
         this.validate();
-        this.dontYouForgetAboutMe();
+        if (!this.previouslySubmitted) {
+          this.dontYouForgetAboutMe();
+        }
 
         if(this.valid) {
           this.pw.content = '';
