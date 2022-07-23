@@ -60,9 +60,7 @@
         rememberMe: false
       }
     },
-    mounted() {
-      console.log(process.client)
-    },
+    mounted() {},
     methods: {
       modalToggle() {
         this.modalopen = !this.modalopen;
