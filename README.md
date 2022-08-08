@@ -10,4 +10,15 @@ Though I’ve only been doing 3D art for the better half of the past year, I fee
 ---
 *Stack uses: Nuxt, Vue, SCSS, built in Glitch before being deployed to github pages*
 
+---
+
+### Local Dev
+
+setting up the env is pretty simple, just a few npm commands.
+
+- `npm install` in your project root (wherever your package.json file is) for dependencies install.
+- `npm run dev` to generate localhost server to work off of.
+
+the other commands are there mostly for netlify deployment, with the exception of "deploy" which is a remenant of an old github workflow.
+
 [![made With ❤️ by Ltrademark](https://static.basedcdn.com/madebyLTM/src/assets/made-with-less3-by-ltrademark.png)](https://ltrdmrk.co)

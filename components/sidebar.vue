@@ -1,6 +1,8 @@
 <template>
   <div class="sidebar">
-    <nuxt-link to="/" class="btn back-btn"><icons name="arrow-left" /> back</nuxt-link>
+    <nuxt-link to="/" class="btn back-btn">
+      <icons name="arrow-left" /> back
+    </nuxt-link>
     <h1>{{name}}</h1>
     <h4>{{title}}</h4>
     <ul class="sidebar-social">
@@ -117,6 +119,7 @@
       }
     }
   }
+  
 </style>
 <style lang="scss">
   .viewing-work {

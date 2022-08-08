@@ -1,10 +1,14 @@
 <template>
   <div class="app" :class="{'viewing-work' : $nuxt.$route.name.includes('work')}">
-    <topnav />
+    <transition name="fade" mode="out-in">
+      <topnav v-if="loaded"/>
+    </transition>
     <div class="app-cont">
-      <sidebar></sidebar>
       <transition name="fade" mode="out-in">
-        <nuxt/>
+        <sidebar v-if="loaded"></sidebar>
+      </transition>
+      <transition name="fade" mode="out-in">
+        <nuxt />
       </transition>
       <smallfooter v-if="isMobile" />
     </div>
@@ -49,6 +53,7 @@
     },
     data() {
       return {
+        loaded: false,
         prefersDark: false,
         isMobile: false
       }
@@ -57,6 +62,7 @@
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         this.prefersDark = event.matches ? true : false;
       });
+      this.loaded = true;
     },
     created(){
       console.clear();
